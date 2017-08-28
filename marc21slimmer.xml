@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marc:record xmlns:marc="http://www.loc.gov/MARC21/slim">
+
+
+000000001
+
+001926393
+
+
+<marc:datafield ind1="0" ind2="0" tag="001">
+<marc:subfield code="a">x530741430</marc:subfield>
+<marc:subfield code="f">a</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1="0" ind2="0" tag="004">
+<marc:subfield code="r">n</marc:subfield>
+<marc:subfield code="a">e</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1="0" ind2="0" tag="008">
+<marc:subfield code="a">1859</marc:subfield>
+<marc:subfield code="b">dk</marc:subfield>
+<marc:subfield code="l">dan</marc:subfield>
+<marc:subfield code="t">m</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1="0" ind2="0" tag="009">
+<marc:subfield code="a">a</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1="0" ind2="0" tag="088">
+<marc:subfield code="o">57,-458</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1="0" ind2="0" tag="852"><marc:subfield code="a">57,-458-8°</marc:subfield></marc:datafield>
+<marc:datafield ind1="0" ind2="0" tag="100"><marc:subfield code="a">Mühlbach, Louise</marc:subfield></marc:datafield>
+<marc:datafield ind1="0" ind2="3" tag="245"><marc:subfield code="a">En  Formiddag hos Frederik den Store</marc:subfield><marc:subfield code="b"> :historisk Charakteerbillede</marc:subfield><marc:subfield code="c"> /af L. Mühlbach</marc:subfield></marc:datafield>
+<marc:datafield ind1="0" ind2="0" tag="260"><marc:subfield code="a">Kbh</marc:subfield><marc:subfield code="b">Jordans' Forlag</marc:subfield><marc:subfield code="c">,1859</marc:subfield></marc:datafield>
+<marc:datafield ind1="0" ind2="0" tag="300">
+<marc:subfield code="a">188 s.</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1="0" ind2="0" tag="599">
+<marc:subfield code="c">SCK19991122</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1="0" ind2="0" tag="B01">
+<marc:subfield code="a">KBD</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1="0" ind2="0" tag="B01">
+<marc:subfield code="a">DPT</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1="0" ind2="0" tag="B01">
+<marc:subfield code="a">DOD</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1=" " ind2=" " tag="CAT">
+<marc:subfield code="a">BATCH</marc:subfield>
+<marc:subfield code="b">00</marc:subfield>
+<marc:subfield code="c">20000706</marc:subfield>
+<marc:subfield code="l">KGL01</marc:subfield>
+<marc:subfield code="h">1921</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1=" " ind2=" " tag="CAT">
+<marc:subfield code="a">CONV14</marc:subfield>
+<marc:subfield code="b">00</marc:subfield>
+<marc:subfield code="c">20020704</marc:subfield>
+<marc:subfield code="l">KGL01</marc:subfield>
+<marc:subfield code="h">0122</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1=" " ind2=" " tag="CAT">
+<marc:subfield code="a">BATCH</marc:subfield>
+<marc:subfield code="b">00</marc:subfield>
+<marc:subfield code="c">20041104</marc:subfield>
+<marc:subfield code="l">KGL01</marc:subfield>
+<marc:subfield code="h">2226</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1=" " ind2=" " tag="CAT">
+<marc:subfield code="a">MANAGE-50</marc:subfield>
+<marc:subfield code="b">00</marc:subfield>
+<marc:subfield code="c">20041104</marc:subfield>
+<marc:subfield code="l">KGL01</marc:subfield>
+<marc:subfield code="h">2303</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1=" " ind2=" " tag="CAT">
+<marc:subfield code="a">BATCH</marc:subfield>
+<marc:subfield code="b">00</marc:subfield>
+<marc:subfield code="c">20050222</marc:subfield>
+<marc:subfield code="l">KGL01</marc:subfield>
+<marc:subfield code="h">0109</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1=" " ind2=" " tag="CAT">
+<marc:subfield code="a">BATCH-UPD</marc:subfield>
+<marc:subfield code="b">00</marc:subfield>
+<marc:subfield code="c">20071214</marc:subfield>
+<marc:subfield code="l">KGL01</marc:subfield>
+<marc:subfield code="h">2027</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1=" " ind2=" " tag="CAT">
+<marc:subfield code="a">BATCH-UPD</marc:subfield>
+<marc:subfield code="b">00</marc:subfield>
+<marc:subfield code="c">20110929</marc:subfield>
+<marc:subfield code="l">KGL01</marc:subfield>
+<marc:subfield code="h">1102</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1=" " ind2=" " tag="CAT">
+<marc:subfield code="a">BATCH-UPD</marc:subfield>
+<marc:subfield code="b">00</marc:subfield>
+<marc:subfield code="c">20120330</marc:subfield>
+<marc:subfield code="l">KGL01</marc:subfield>
+<marc:subfield code="h">1505</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1=" " ind2=" " tag="CAT">
+<marc:subfield code="a">KAH</marc:subfield>
+<marc:subfield code="b">00</marc:subfield>
+<marc:subfield code="c">20121119</marc:subfield>
+<marc:subfield code="l">KGL01</marc:subfield>
+<marc:subfield code="h">1311</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1=" " ind2=" " tag="CAT">
+<marc:subfield code="a">EIMPORT</marc:subfield>
+<marc:subfield code="b"/>
+<marc:subfield code="c">20121126</marc:subfield>
+<marc:subfield code="l">KGL01</marc:subfield>
+<marc:subfield code="h">2000</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1=" " ind2=" " tag="UID">
+<marc:subfield code="a">x530741430kbd</marc:subfield>
+</marc:datafield>
+001926393
+<marc:datafield ind1=" " ind2=" " tag="PST">
+<marc:subfield code="e">DU</marc:subfield>
+<marc:subfield code="h">57,-458-8°</marc:subfield>
+<marc:subfield code="3">BOG</marc:subfield>
+<marc:subfield code="4">Closed stack</marc:subfield>
+<marc:subfield code="5">Danish coll. remote stack</marc:subfield>
+<marc:subfield code="7">USE DIGITAL VERSION</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1=" " ind2=" " tag="SBL">
+<marc:subfield code="a">KLDA</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1=" " ind2=" " tag="LOC">
+<marc:subfield code="b">KLDA</marc:subfield>
+<marc:subfield code="c">DAKAB</marc:subfield>
+<marc:subfield code="h">57,-458-8°</marc:subfield>
+<marc:subfield code="o">BOOK</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1="0" ind2="0" tag="K15">
+<marc:subfield code="a">Enkeltstående post</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1="0" ind2="0" tag="K01">
+<marc:subfield code="a">Danmark</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1="0" ind2="0" tag="K02">
+<marc:subfield code="a">Dansk</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1="0" ind2="0" tag="K13">
+<marc:subfield code="a">Bog; Mono</marc:subfield>
+</marc:datafield>
+<marc:datafield ind1=" " ind2=" " tag="AVA">
+<marc:subfield code="a">KGL50</marc:subfield>
+<marc:subfield code="b">KLDA</marc:subfield>
+<marc:subfield code="c">Danish coll. remote stack</marc:subfield>
+<marc:subfield code="d">57,-458-8°</marc:subfield>
+<marc:subfield code="e">available</marc:subfield>
+<marc:subfield code="t">Available</marc:subfield>
+<marc:subfield code="f">1</marc:subfield>
+<marc:subfield code="g">0</marc:subfield>
+<marc:subfield code="h">N</marc:subfield>
+<marc:subfield code="i">1</marc:subfield>
+<marc:subfield code="j">DAKAB</marc:subfield>
+</marc:datafield>
+
+
+
+HLQVPTMY6D71V5X3G6AG5F4LKSDJLU58A6MIGSMKKC968RKPEN
+</marc:record>

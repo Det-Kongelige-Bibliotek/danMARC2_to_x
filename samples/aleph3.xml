@@ -1,0 +1,174 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<present>
+<record>
+<record_header>
+<set_entry>000000001</set_entry>
+</record_header>
+<doc_number>008186576</doc_number>
+<metadata>
+<oai_marc>
+<varfield id="001" i1="0" i2="0">
+<subfield label="a">x928743106</subfield>
+<subfield label="f">a</subfield>
+</varfield>
+<varfield id="002" i1="0" i2="0">
+<subfield label="a">2 874 310 6</subfield>
+</varfield>
+<varfield id="004" i1="0" i2="0">
+<subfield label="r">n</subfield>
+<subfield label="a">e</subfield>
+</varfield>
+<varfield id="008" i1="0" i2="0">
+<subfield label="t">m</subfield>
+<subfield label="u">f</subfield>
+<subfield label="a">2011</subfield>
+<subfield label="b">dk</subfield>
+<subfield label="d">y</subfield>
+<subfield label="l">dan</subfield>
+<subfield label="v">0</subfield>
+</varfield>
+<varfield id="009" i1="0" i2="0">
+<subfield label="a">a</subfield>
+<subfield label="g">xx</subfield>
+</varfield>
+<varfield id="021" i1="0" i2="0">
+<subfield label="e">9788791220579</subfield>
+<subfield label="c">hf.</subfield>
+<subfield label="d">kr. 125,00</subfield>
+</varfield>
+<varfield id="032" i1="0" i2="0">
+<subfield label="a">DBF201122</subfield>
+<subfield label="x">BKM201122</subfield>
+</varfield>
+<varfield id="096" i1="0" i2="0">
+<subfield label="u">Kan ikke hjemlånes</subfield>
+</varfield>
+<varfield id="100" i1="0" i2="0">
+<subfield label="a">Thielst</subfield>
+<subfield label="h">Peter</subfield>
+<subfield label="4">aut</subfield>
+<subfield label="5">Forfatter</subfield>
+</varfield>
+<varfield id="245" i1="0" i2="0">
+<subfield label="a">Ordbrok over den danske zpuk</subfield>
+</varfield>
+<varfield id="250" i1="0" i2="0">
+<subfield label="x">1. oplag</subfield>
+</varfield>
+<varfield id="260" i1="0" i2="0">
+<subfield label="a">[Helsingør]</subfield>
+<subfield label="b">Det lille Forlag</subfield>
+<subfield label="c">2011</subfield>
+</varfield>
+<varfield id="300" i1="0" i2="0">
+<subfield label="a">78 sider</subfield>
+</varfield>
+<varfield id="595" i1="0" i2="0">
+<subfield label="a">Thielst DLF</subfield>
+</varfield>
+<varfield id="599" i1="0" i2="0">
+<subfield label="b">bkpl201129</subfield>
+</varfield>
+<varfield id="599" i1="0" i2="0">
+<subfield label="b">DODplus</subfield>
+</varfield>
+<varfield id="652" i1="0" i2="0">
+<subfield label="m">89.6</subfield>
+</varfield>
+<varfield id="B01" i1="0" i2="0">
+<subfield label="a">KBD</subfield>
+</varfield>
+<varfield id="B01" i1="0" i2="0">
+<subfield label="a">DOD</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">PLGDBC</subfield>
+<subfield label="b"></subfield>
+<subfield label="c">20110720</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">0911</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20110720</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">0912</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="c">20111017</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">0215</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">MAB</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20130410</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">0850</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">EIMPORT</subfield>
+<subfield label="b"></subfield>
+<subfield label="c">20130412</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">2001</subfield>
+</varfield>
+<varfield id="UID" i1=" " i2=" ">
+<subfield label="a">x928743106kbd</subfield>
+</varfield>
+<fixfield id="SYS">008186576</fixfield>
+<varfield id="PST" i1=" " i2=" ">
+<subfield label="e">DU</subfield>
+<subfield label="h">DA8-AA6717</subfield>
+<subfield label="3">BOG</subfield>
+<subfield label="4">Closed stack</subfield>
+<subfield label="5">Danish coll. remote stack</subfield>
+<subfield label="7">USE DIGITAL VERSION</subfield>
+</varfield>
+<varfield id="SBL" i1=" " i2=" ">
+<subfield label="a">KLDA</subfield>
+</varfield>
+<varfield id="LOC" i1=" " i2=" ">
+<subfield label="b">KLDA</subfield>
+<subfield label="c">DAKAB</subfield>
+<subfield label="h">DA8-AA6717</subfield>
+<subfield label="o">BOOK</subfield>
+</varfield>
+<varfield id="K15" i1="0" i2="0">
+<subfield label="a">Enkeltstående post</subfield>
+</varfield>
+<varfield id="K01" i1="0" i2="0">
+<subfield label="a">Danmark</subfield>
+</varfield>
+<varfield id="K05" i1="0" i2="0">
+<subfield label="a">Faglitteratur</subfield>
+</varfield>
+<varfield id="K02" i1="0" i2="0">
+<subfield label="a">Dansk</subfield>
+</varfield>
+<varfield id="K13" i1="0" i2="0">
+<subfield label="a">Bog; Mono</subfield>
+</varfield>
+<varfield id="K16" i1="0" i2="0">
+<subfield label="a">Katalogisering, selvsyn</subfield>
+</varfield>
+<varfield id="AVA" i1=" " i2=" ">
+<subfield label="a">KGL50</subfield>
+<subfield label="b">KLDA</subfield>
+<subfield label="c">Danish coll. remote stack</subfield>
+<subfield label="d">DA8-AA6717</subfield>
+<subfield label="e">available</subfield>
+<subfield label="t">Available</subfield>
+<subfield label="f">1</subfield>
+<subfield label="g">0</subfield>
+<subfield label="h">N</subfield>
+<subfield label="i">1</subfield>
+<subfield label="j">DAKAB</subfield>
+</varfield>
+</oai_marc>
+</metadata>
+</record>
+<session-id>J3Y36EEMXJ9JI5B7J3HQG2DB8HNECC5GM6K4HVYE35JTPJEX1S</session-id>
+</present>
+ 

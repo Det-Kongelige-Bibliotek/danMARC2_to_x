@@ -1,0 +1,137 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<present>
+<record>
+<record_header>
+<set_entry>000000001</set_entry>
+</record_header>
+<doc_number>008675974</doc_number>
+<metadata>
+<oai_marc>
+<varfield id="001" i1="0" i2="0">
+<subfield label="a">x237918616</subfield>
+<subfield label="f">a</subfield>
+</varfield>
+<varfield id="004" i1="0" i2="0">
+<subfield label="r">n</subfield>
+<subfield label="a">e</subfield>
+</varfield>
+<varfield id="008" i1="0" i2="0">
+<subfield label="a">2013</subfield>
+<subfield label="b">dk</subfield>
+<subfield label="l">dan</subfield>
+<subfield label="t">m</subfield>
+</varfield>
+<varfield id="009" i1="0" i2="0">
+<subfield label="a">a</subfield>
+</varfield>
+<varfield id="096" i1="0" i2="0">
+<subfield label="u">Kan ikke hjemlånes</subfield>
+</varfield>
+<varfield id="100" i1="0" i2="0">
+<subfield label="a">Greve</subfield>
+<subfield label="h">Vagn</subfield>
+</varfield>
+<varfield id="245" i1="0" i2="0">
+<subfield label="a">Systematisk register til Nordisk tidsskrift for kriminalvidenskab</subfield>
+<subfield label="e">Vagn Greve</subfield>
+</varfield>
+<varfield id="260" i1="0" i2="0">
+<subfield label="a">Greve</subfield>
+<subfield label="b">Vagn Greve</subfield>
+<subfield label="c">[2013]</subfield>
+</varfield>
+<varfield id="300" i1="0" i2="0">
+<subfield label="a">146 s.</subfield>
+</varfield>
+<varfield id="599" i1="0" i2="0">
+<subfield label="b">DODplus</subfield>
+</varfield>
+<varfield id="599" i1="0" i2="0">
+<subfield label="b">bkpl201350G</subfield>
+</varfield>
+<varfield id="B01" i1="0" i2="0">
+<subfield label="a">KBD</subfield>
+</varfield>
+<varfield id="B01" i1="0" i2="0">
+<subfield label="a">DOD</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">KAH</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20131210</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">1248</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">MAB</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20131213</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">1448</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">EIMPORT</subfield>
+<subfield label="b"></subfield>
+<subfield label="c">20140109</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">2001</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">MAB</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20140110</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">1118</subfield>
+</varfield>
+<varfield id="UID" i1=" " i2=" ">
+<subfield label="a">x237918616kbd</subfield>
+</varfield>
+<fixfield id="SYS">008675974</fixfield>
+<varfield id="PST" i1=" " i2=" ">
+<subfield label="e">DU</subfield>
+<subfield label="h">DA4-R7039</subfield>
+<subfield label="3">BOG</subfield>
+<subfield label="4">Closed stack</subfield>
+<subfield label="5">Danish coll. remote stack</subfield>
+<subfield label="7">USE DIGITAL VERSION</subfield>
+</varfield>
+<varfield id="SBL" i1=" " i2=" ">
+<subfield label="a">KLDA</subfield>
+</varfield>
+<varfield id="LOC" i1=" " i2=" ">
+<subfield label="b">KLDA</subfield>
+<subfield label="c">DAKAB</subfield>
+<subfield label="h">DA4-R7039</subfield>
+<subfield label="o">BOOK</subfield>
+</varfield>
+<varfield id="K15" i1="0" i2="0">
+<subfield label="a">Enkeltstående post</subfield>
+</varfield>
+<varfield id="K01" i1="0" i2="0">
+<subfield label="a">Danmark</subfield>
+</varfield>
+<varfield id="K02" i1="0" i2="0">
+<subfield label="a">Dansk</subfield>
+</varfield>
+<varfield id="K13" i1="0" i2="0">
+<subfield label="a">Bog; Mono</subfield>
+</varfield>
+<varfield id="AVA" i1=" " i2=" ">
+<subfield label="a">KGL50</subfield>
+<subfield label="b">KLDA</subfield>
+<subfield label="c">Danish coll. remote stack</subfield>
+<subfield label="d">DA4-R7039</subfield>
+<subfield label="e">available</subfield>
+<subfield label="t">Available</subfield>
+<subfield label="f">1</subfield>
+<subfield label="g">0</subfield>
+<subfield label="h">N</subfield>
+<subfield label="i">2</subfield>
+<subfield label="j">DAKAB</subfield>
+</varfield>
+</oai_marc>
+</metadata>
+</record>
+<session-id>AD4CI8GAV422GM3JJ812CB35S8JMIQV8H96ME5J7PIBL34AT8N</session-id>
+</present>
+ 

@@ -1,0 +1,162 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<present>
+<record>
+<record_header>
+<set_entry>000000001</set_entry>
+</record_header>
+<doc_number>002321529</doc_number>
+<metadata>
+<oai_marc>
+<varfield id="001" i1="0" i2="0">
+<subfield label="a">x482918097</subfield>
+<subfield label="f">a</subfield>
+</varfield>
+<varfield id="004" i1="0" i2="0">
+<subfield label="r">n</subfield>
+<subfield label="a">e</subfield>
+</varfield>
+<varfield id="008" i1="0" i2="0">
+<subfield label="t">m</subfield>
+<subfield label="u">?</subfield>
+<subfield label="a">18??</subfield>
+<subfield label="b">no</subfield>
+<subfield label="l">nor</subfield>
+</varfield>
+<varfield id="009" i1="0" i2="0">
+<subfield label="a">a</subfield>
+</varfield>
+<varfield id="088" i1="0" i2="0">
+<subfield label="o">24,-76</subfield>
+</varfield>
+<varfield id="096" i1="0" i2="0">
+<subfield label="a">24,-76 8°</subfield>
+<subfield label="u">Kan ikke hjemlånes</subfield>
+</varfield>
+<varfield id="245" i1="0" i2="0">
+<subfield label="a">Beskrivelse over de medfølgende Tegninger til sammenbyggede Udhuse for en mindre &lt;&lt;Gaard=gård&gt;&gt;, at bygge i en &lt;&lt;Bakkeskraaning=bakkeskråning&gt;&gt;</subfield>
+</varfield>
+<varfield id="260" i1="0" i2="0">
+<subfield label="a">[Kristiania?]</subfield>
+<subfield label="c">[18--?]</subfield>
+</varfield>
+<varfield id="300" i1="0" i2="0">
+<subfield label="a">4 s., [3] falsede tav.</subfield>
+</varfield>
+<varfield id="599" i1="0" i2="0">
+<subfield label="c">SCK20020517</subfield>
+</varfield>
+<varfield id="B01" i1="0" i2="0">
+<subfield label="a">KBD</subfield>
+</varfield>
+<varfield id="B01" i1="0" i2="0">
+<subfield label="a">DOD</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">RETROPMA</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20020517</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">1259</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">CONV14</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20020705</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">0209</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20041106</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">1452</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">MANAGE-50</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20041106</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">1510</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20071228</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">1912</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="c">20120301</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">1456</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">MIB</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20120702</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">1317</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">EIMPORT</subfield>
+<subfield label="b"></subfield>
+<subfield label="c">20120717</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">1801</subfield>
+</varfield>
+<varfield id="UID" i1=" " i2=" ">
+<subfield label="a">x482918097kbd</subfield>
+</varfield>
+<fixfield id="SYS">002321529</fixfield>
+<varfield id="PST" i1=" " i2=" ">
+<subfield label="e">DU</subfield>
+<subfield label="h">24,-76 8°</subfield>
+<subfield label="3">BOG</subfield>
+<subfield label="4">Closed stack</subfield>
+<subfield label="5">Danish coll. remote stack</subfield>
+<subfield label="7">USE DIGITAL VERSION</subfield>
+</varfield>
+<varfield id="SBL" i1=" " i2=" ">
+<subfield label="a">KLDA</subfield>
+</varfield>
+<varfield id="LOC" i1=" " i2=" ">
+<subfield label="b">KLDA</subfield>
+<subfield label="c">DAKAB</subfield>
+<subfield label="h">24,-76 8°</subfield>
+<subfield label="o">BOOK</subfield>
+</varfield>
+<varfield id="K15" i1="0" i2="0">
+<subfield label="a">Enkeltstående post</subfield>
+</varfield>
+<varfield id="K01" i1="0" i2="0">
+<subfield label="a">Norge</subfield>
+</varfield>
+<varfield id="K02" i1="0" i2="0">
+<subfield label="a">Norsk</subfield>
+</varfield>
+<varfield id="K13" i1="0" i2="0">
+<subfield label="a">Bog; Mono</subfield>
+</varfield>
+<varfield id="K17" i1="0" i2="0">
+<subfield label="a">Ukendt</subfield>
+</varfield>
+<varfield id="AVA" i1=" " i2=" ">
+<subfield label="a">KGL50</subfield>
+<subfield label="b">KLDA</subfield>
+<subfield label="c">Danish coll. remote stack</subfield>
+<subfield label="d">24,-76 8°</subfield>
+<subfield label="e">available</subfield>
+<subfield label="t">Available</subfield>
+<subfield label="f">1</subfield>
+<subfield label="g">0</subfield>
+<subfield label="h">N</subfield>
+<subfield label="i">1</subfield>
+<subfield label="j">DAKAB</subfield>
+</varfield>
+</oai_marc>
+</metadata>
+</record>
+<session-id>YI4EY8AKDQG3SV62HMF7PIRGPDK1LX5462LMFDR89XFBDVJ6TN</session-id>
+</present>
+ 

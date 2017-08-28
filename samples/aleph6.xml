@@ -1,0 +1,156 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<present>
+<record>
+<record_header>
+<set_entry>000000001</set_entry>
+</record_header>
+<doc_number>004879548</doc_number>
+<metadata>
+<oai_marc>
+<varfield id="001" i1="0" i2="0">
+<subfield label="a">x232973481</subfield>
+<subfield label="f">a</subfield>
+</varfield>
+<varfield id="004" i1="0" i2="0">
+<subfield label="r">n</subfield>
+<subfield label="a">e</subfield>
+</varfield>
+<varfield id="008" i1="0" i2="0">
+<subfield label="t">m</subfield>
+<subfield label="u">?</subfield>
+<subfield label="a">18??</subfield>
+<subfield label="b">dk</subfield>
+<subfield label="l">dan</subfield>
+</varfield>
+<varfield id="009" i1="0" i2="0">
+<subfield label="a">a</subfield>
+</varfield>
+<varfield id="088" i1="0" i2="0">
+<subfield label="o">43,-117</subfield>
+</varfield>
+<varfield id="096" i1="0" i2="0">
+<subfield label="a">43,-117 8°</subfield>
+<subfield label="u">Kan ikke hjemlånes</subfield>
+</varfield>
+<varfield id="100" i1="0" i2="0">
+<subfield label="a">Petersen</subfield>
+<subfield label="h">M.</subfield>
+</varfield>
+<varfield id="245" i1="0" i2="0">
+<subfield label="a">&lt;&lt;Den &gt;&gt;fiirdobbelte Morderske Maria Christine Frandsen&apos;s Levnetsbeskrivelse, der har qvalt sin Mand Snedkersvend Voss, skaaret halsen over paa sin Kjæreste, en Malermester N. N. samt dræbt to af sine kjødelige Børn, ved at indgive dem et Qvantum Qviksølv og &lt;&lt;Kampferdraaber=kampferdråber&gt;&gt; samt denne Forbryderskes veltrufne Portrait (iført hendes Fængselsdragt)</subfield>
+<subfield label="e">udgivet af M. Petersen</subfield>
+</varfield>
+<varfield id="260" i1="0" i2="0">
+<subfield label="a">Kjøbenhavn</subfield>
+<subfield label="b">Berg</subfield>
+<subfield label="c">[18--?]</subfield>
+</varfield>
+<varfield id="300" i1="0" i2="0">
+<subfield label="a">8 s.</subfield>
+</varfield>
+<varfield id="599" i1="0" i2="0">
+<subfield label="c">RETRO200503</subfield>
+</varfield>
+<varfield id="B01" i1="0" i2="0">
+<subfield label="a">KBD</subfield>
+</varfield>
+<varfield id="B01" i1="0" i2="0">
+<subfield label="a">DOD</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">HDAKMB</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20050331</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">1041</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH-UPD</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20080104</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">1733</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20121014</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">1325</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">BATCH</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20121014</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">1803</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">MIB</subfield>
+<subfield label="b">00</subfield>
+<subfield label="c">20131112</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">1043</subfield>
+</varfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">EIMPORT</subfield>
+<subfield label="b"></subfield>
+<subfield label="c">20140212</subfield>
+<subfield label="l">KGL01</subfield>
+<subfield label="h">1133</subfield>
+</varfield>
+<varfield id="UID" i1=" " i2=" ">
+<subfield label="a">x232973481kbd</subfield>
+</varfield>
+<fixfield id="SYS">004879548</fixfield>
+<varfield id="PST" i1=" " i2=" ">
+<subfield label="e">DU</subfield>
+<subfield label="h">43,-117 8°</subfield>
+<subfield label="3">BOG</subfield>
+<subfield label="4">Closed stack</subfield>
+<subfield label="5">Danish coll. remote stack</subfield>
+<subfield label="7">USE DIGITAL VERSION</subfield>
+</varfield>
+<varfield id="SBL" i1=" " i2=" ">
+<subfield label="a">KLDA</subfield>
+</varfield>
+<varfield id="LOC" i1=" " i2=" ">
+<subfield label="b">KLDA</subfield>
+<subfield label="c">DAKAB</subfield>
+<subfield label="h">43,-117 8°</subfield>
+<subfield label="o">BOOK</subfield>
+</varfield>
+<varfield id="K15" i1="0" i2="0">
+<subfield label="a">Enkeltstående post</subfield>
+</varfield>
+<varfield id="K01" i1="0" i2="0">
+<subfield label="a">Danmark</subfield>
+</varfield>
+<varfield id="K02" i1="0" i2="0">
+<subfield label="a">Dansk</subfield>
+</varfield>
+<varfield id="K13" i1="0" i2="0">
+<subfield label="a">Bog; Mono</subfield>
+</varfield>
+<varfield id="K17" i1="0" i2="0">
+<subfield label="a">Ukendt</subfield>
+</varfield>
+<varfield id="AVA" i1=" " i2=" ">
+<subfield label="a">KGL50</subfield>
+<subfield label="b">KLDA</subfield>
+<subfield label="c">Danish coll. remote stack</subfield>
+<subfield label="d">43,-117 8°</subfield>
+<subfield label="e">available</subfield>
+<subfield label="t">Available</subfield>
+<subfield label="f">1</subfield>
+<subfield label="g">0</subfield>
+<subfield label="h">N</subfield>
+<subfield label="i">3</subfield>
+<subfield label="j">DAKAB</subfield>
+</varfield>
+</oai_marc>
+</metadata>
+</record>
+<session-id>VPEXFAGQHBJ56TB18HC63HTEB5QXFAFXBEH9FB2FHURF43UMLP</session-id>
+</present>
+ 
