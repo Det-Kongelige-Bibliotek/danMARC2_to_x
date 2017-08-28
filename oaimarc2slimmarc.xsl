@@ -7,7 +7,7 @@
 	       xmlns:exsl="http://exslt.org/common"
 	       extension-element-prefixes="exsl">
 
-  <xsl:param name="pdfUri"  select="'http://example.com/mock-file.pdf'" />
+  <xsl:param name="pdfUri"  select="''" />
 
   <!-- http://biblstandard.dk/kat/konv_danmarc2_to_marc21.htm -->
 
@@ -483,6 +483,9 @@
 
   <xsl:template match="varfield">
     <xsl:element name="marc:datafield">
+      <xsl:attribute name="tag">
+	<xsl:value-of select="@id"/>
+      </xsl:attribute>
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
