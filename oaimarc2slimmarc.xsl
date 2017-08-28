@@ -486,6 +486,7 @@
       <xsl:attribute name="tag">
 	<xsl:value-of select="@id"/>
       </xsl:attribute>
+      <xsl:call-template name="indicators"/>
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
