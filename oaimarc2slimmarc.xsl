@@ -480,6 +480,19 @@
     </xsl:if>
   </xsl:template>
 
+  <xsl:template match="varfield[@id='652']">
+    <xsl:element name="marc:datafield">
+      <xsl:attribute name="ind1"><xsl:text>0</xsl:text></xsl:attribute>
+      <xsl:attribute name="ind2"><xsl:text>4</xsl:text></xsl:attribute>
+      <xsl:attribute name="tag">084</xsl:attribute>
+      <xsl:element name="marc:subfield"><xsl:attribute name="code">2</xsl:attribute>ddc</xsl:element>
+      <xsl:element name="marc:subfield">
+	<xsl:attribute name="code">a</xsl:attribute>
+	<xsl:value-of select="subfield"/>
+      </xsl:element>
+    </xsl:element>
+  </xsl:template>
+
   <xsl:template match="varfield[@id='700']">
     <xsl:element name="marc:datafield">
       <xsl:choose>
