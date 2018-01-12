@@ -79,7 +79,42 @@
         <xsl:apply-templates select="subfield[@label='l']"/>
       </xsl:element>
     </xsl:element>
+  </xsl:template>
 
+  <xsl:template match="varfield[@id='041']">
+    <xsl:element name="marc:datafield">
+      <xsl:choose>
+	<xsl:when test="subfield/@label='b' or subfield/@label='c' or subfield/@label='u'">
+	  <xsl:attribute name="ind1">1</xsl:attribute>
+	  <xsl:attribute name="ind2">b</xsl:attribute>
+	</xsl:when>
+	<xsl:otherwise>
+	  <xsl:attribute name="ind1">0</xsl:attribute>
+	  <xsl:attribute name="ind2">b</xsl:attribute>
+	</xsl:otherwise>
+      </xsl:choose>
+      <xsl:attribute name="tag">041</xsl:attribute>
+      <xsl:for-each select="subfield[@label = 'a']|
+	subfield[@label = 'b']|
+	subfield[@label = 'c']|
+	subfield[@label = 'd']|
+	subfield[@label = 'e']|
+	subfield[@label = 'p']|
+	subfield[@label = 's']|
+	subfield[@label = 'u']">
+	<xsl:element name="marc:subfield">
+	  <xsl:attribute name="code">
+	    <xsl:choose>
+	      <xsl:when test="contains('as',@label)">a</xsl:when>
+	      <xsl:when test="contains('deu',@label)">b</xsl:when>
+	      <xsl:when test="contains('bc',@label)">h</xsl:when>
+	      <xsl:otherwise>??</xsl:otherwise>
+	    </xsl:choose>
+	  </xsl:attribute>
+	  <xsl:apply-templates/>
+	</xsl:element>
+      </xsl:for-each>
+    </xsl:element>
   </xsl:template>
 
   <xsl:template match="varfield[@id='021']">
@@ -429,6 +464,20 @@
       <xsl:call-template name="indicators"/>
       <xsl:call-template name="name-content" />
     </xsl:element>
+  </xsl:template>
+
+  <xsl:template match="varfield[@id='631']">
+    <xsl:if test="contains('abfgst',subfield/@label)">
+    <xsl:element name="marc:datafield">
+      <xsl:attribute name="ind1"><xsl:text> </xsl:text></xsl:attribute>
+      <xsl:attribute name="ind2"><xsl:text> </xsl:text></xsl:attribute>
+      <xsl:attribute name="tag">653</xsl:attribute>
+      <xsl:element name="marc:subfield">
+	<xsl:attribute name="code">a</xsl:attribute>
+	<xsl:value-of select="subfield"/>
+      </xsl:element>
+    </xsl:element>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template match="varfield[@id='700']">
