@@ -7,6 +7,7 @@ for file in samples/*xml ; do
     
     xsltproc $OAIMARC2SLIMMARC $file  > `basename $file .xml`.marc
     xsltproc marcToMODS.xsl `basename $file .xml`.marc > `basename $file .xml`.mods
+    xmllint --noout --schema mods-3-7.xsd `basename $file .xml`.mods
 
 done
 
