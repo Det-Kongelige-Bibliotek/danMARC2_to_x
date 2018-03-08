@@ -1,0 +1,2464 @@
+<?xml version="1.0"?>
+<grammar ns="http://www.loc.gov/mods/v3"
+    xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <choice>
+            <ref name="extent"/>
+            <ref name="occupation"/>
+            <ref name="scriptTerm"/>
+            <ref name="recordInfoNote"/>
+            <ref name="county"/>
+            <ref name="caption"/>
+            <ref name="typeOfResource"/>
+            <ref name="number"/>
+            <ref name="province"/>
+            <ref name="text"/>
+            <ref name="state"/>
+            <ref name="cartographics"/>
+            <ref name="roleTerm"/>
+            <ref name="temporal"/>
+            <ref name="identifier"/>
+            <ref name="holdingSimple"/>
+            <ref name="classification"/>
+            <ref name="recordOrigin"/>
+            <ref name="etal"/>
+            <ref name="itemIdentifier"/>
+            <ref name="detail"/>
+            <ref name="physicalDescription"/>
+            <ref name="recordIdentifier"/>
+            <ref name="continent"/>
+            <ref name="extension"/>
+            <ref name="role"/>
+            <ref name="city"/>
+            <ref name="modsCollection"/>
+            <ref name="dateOther"/>
+            <ref name="dateValid"/>
+            <ref name="citySection"/>
+            <ref name="languageOfCataloging"/>
+            <ref name="recordInfo"/>
+            <ref name="genre"/>
+            <ref name="originInfo"/>
+            <ref name="place"/>
+            <ref name="dateIssued"/>
+            <ref name="geographicCode"/>
+            <ref name="physicalLocation"/>
+            <ref name="accessCondition"/>
+            <ref name="coordinates"/>
+            <ref name="reformattingQuality"/>
+            <ref name="abstract"/>
+            <ref name="url"/>
+            <ref name="enumerationAndChronology"/>
+            <ref name="copyInformation"/>
+            <ref name="partNumber"/>
+            <ref name="date"/>
+            <ref name="internetMediaType"/>
+            <ref name="country"/>
+            <ref name="mods"/>
+            <ref name="hierarchicalGeographic"/>
+            <ref name="subject"/>
+            <ref name="nonSort"/>
+            <ref name="titleInfo"/>
+            <ref name="language"/>
+            <ref name="relatedItem"/>
+            <ref name="displayForm"/>
+            <ref name="frequency"/>
+            <ref name="geographic"/>
+            <ref name="subTitle"/>
+            <ref name="affiliation"/>
+            <ref name="dateCaptured"/>
+            <ref name="holdingExternal"/>
+            <ref name="area"/>
+            <ref name="extraTerrestrialArea"/>
+            <ref name="shelfLocator"/>
+            <ref name="island"/>
+            <ref name="list"/>
+            <ref name="cartographicExtension"/>
+            <ref name="namePart"/>
+            <ref name="descriptionStandard"/>
+            <ref name="languageTerm"/>
+            <ref name="digitalOrigin"/>
+            <ref name="name"/>
+            <ref name="publisher"/>
+            <ref name="topic"/>
+            <ref name="subLocation"/>
+            <ref name="region"/>
+            <ref name="tableOfContents"/>
+            <ref name="nameIdentifier"/>
+            <ref name="recordContentSource"/>
+            <ref name="note"/>
+            <ref name="placeTerm"/>
+            <ref name="part"/>
+            <ref name="description"/>
+            <ref name="edition"/>
+            <ref name="scale"/>
+            <ref name="title"/>
+            <ref name="partName"/>
+            <ref name="total"/>
+            <ref name="dateCreated"/>
+            <ref name="recordCreationDate"/>
+            <ref name="end"/>
+            <ref name="electronicLocator"/>
+            <ref name="projection"/>
+            <ref name="alternativeName"/>
+            <ref name="start"/>
+            <ref name="dateModified"/>
+            <ref name="recordChangeDate"/>
+            <ref name="targetAudience"/>
+            <ref name="form"/>
+            <ref name="issuance"/>
+            <ref name="location"/>
+            <ref name="copyrightDate"/>
+            <ref name="territory"/>
+        </choice>
+    </start>
+    <define name="reformattingQuality">
+        <choice>
+            <notAllowed/>
+            <element name="reformattingQuality">
+                <choice>
+                    <value type="string">preservation</value>
+                    <value type="string">access</value>
+                    <value type="string">replacement</value>
+                </choice>
+            </element>
+        </choice>
+    </define>
+    <define name="edition">
+        <choice>
+            <notAllowed/>
+            <element name="edition">
+                <ref name="anonymous1"/>
+            </element>
+        </choice>
+    </define>
+    <define name="projection">
+        <choice>
+            <notAllowed/>
+            <element name="projection">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="text">
+        <choice>
+            <notAllowed/>
+            <element name="text">
+                <optional>
+                    <attribute name="displayLabel">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="type">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="simpleLink"/>
+                <ref name="anonymous3"/>
+            </element>
+        </choice>
+    </define>
+    <define name="publisher">
+        <choice>
+            <notAllowed/>
+            <element name="publisher">
+                <ref name="authorityAttributeGroup"/>
+                <ref name="anonymous1"/>
+            </element>
+        </choice>
+    </define>
+    <define name="anonymous0">
+        <mixed>
+            <optional>
+                <attribute name="displayLabel">
+                    <data type="string"/>
+                </attribute>
+            </optional>
+            <zeroOrMore>
+                <ref name="any_lax___any_"/>
+            </zeroOrMore>
+        </mixed>
+    </define>
+    <define name="end">
+        <choice>
+            <notAllowed/>
+            <element name="end">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="physicalDescription">
+        <choice>
+            <notAllowed/>
+            <element name="physicalDescription">
+                <optional>
+                    <attribute name="altRepGroup">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="displayLabel">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="languageAttributeGroup"/>
+                <oneOrMore>
+                    <choice>
+                        <ref name="form"/>
+                        <ref name="reformattingQuality"/>
+                        <ref name="internetMediaType"/>
+                        <ref name="extent"/>
+                        <ref name="digitalOrigin"/>
+                        <element name="note">
+                            <optional>
+                                <attribute name="displayLabel">
+                                    <data type="string"/>
+                                </attribute>
+                            </optional>
+                            <optional>
+                                <attribute name="type">
+                                    <data type="string"/>
+                                </attribute>
+                            </optional>
+                            <optional>
+                                <attribute name="typeURI">
+                                    <data type="anyURI"/>
+                                </attribute>
+                            </optional>
+                            <ref name="simpleLink"/>
+                            <optional>
+                                <attribute name="ID">
+                                    <data type="ID"/>
+                                </attribute>
+                            </optional>
+                            <ref name="anonymous3"/>
+                        </element>
+                    </choice>
+                </oneOrMore>
+            </element>
+        </choice>
+    </define>
+    <define name="extension">
+        <choice>
+            <notAllowed/>
+            <element name="extension">
+                <ref name="extensionDefinition"/>
+            </element>
+        </choice>
+    </define>
+    <define name="stringPlusLanguage">
+        <ref name="anonymous3"/>
+        <empty/>
+    </define>
+    <define name="recordInfoNote">
+        <choice>
+            <notAllowed/>
+            <element name="recordInfoNote">
+                <ref name="noteDefinition"/>
+            </element>
+        </choice>
+    </define>
+    <define name="copyrightDate">
+        <choice>
+            <notAllowed/>
+            <element name="copyrightDate">
+                <ref name="dateDefinition"/>
+            </element>
+        </choice>
+    </define>
+    <define name="anonymous1">
+        <optional>
+            <attribute name="supplied">
+                <value>yes</value>
+            </attribute>
+        </optional>
+        <ref name="anonymous3"/>
+    </define>
+    <define name="simpleLink">
+        <optional>
+            <attribute>
+                <name ns="http://www.w3.org/1999/xlink">actuate</name>
+                <choice>
+                    <value type="string">other</value>
+                    <value type="string">onRequest</value>
+                    <value type="string">onLoad</value>
+                    <value type="string">none</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute>
+                <name ns="http://www.w3.org/1999/xlink">show</name>
+                <choice>
+                    <value type="string">new</value>
+                    <value type="string">other</value>
+                    <value type="string">replace</value>
+                    <value type="string">embed</value>
+                    <value type="string">none</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute>
+                <name ns="http://www.w3.org/1999/xlink">title</name>
+                <data type="string"/>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute>
+                <name ns="http://www.w3.org/1999/xlink">arcrole</name>
+                <data type="string"/>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute>
+                <name ns="http://www.w3.org/1999/xlink">role</name>
+                <data type="string"/>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute>
+                <name ns="http://www.w3.org/1999/xlink">href</name>
+                <data type="anyURI"/>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute>
+                <name ns="http://www.w3.org/1999/xlink">type</name>
+                <value type="string">simple</value>
+            </attribute>
+        </optional>
+    </define>
+    <define name="internetMediaType">
+        <choice>
+            <notAllowed/>
+            <element name="internetMediaType">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="namePart">
+        <choice>
+            <notAllowed/>
+            <element name="namePart">
+                <optional>
+                    <attribute name="type">
+                        <choice>
+                            <value type="string">date</value>
+                            <value type="string">given</value>
+                            <value type="string">termsOfAddress</value>
+                            <value type="string">family</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <ref name="anonymous3"/>
+            </element>
+        </choice>
+    </define>
+    <define name="shelfLocator">
+        <choice>
+            <notAllowed/>
+            <element name="shelfLocator">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="extensionDefinition">
+        <ref name="anonymous0"/>
+        <empty/>
+    </define>
+    <define name="cartographicExtension">
+        <choice>
+            <notAllowed/>
+            <element name="cartographicExtension">
+                <ref name="extensionDefinition"/>
+            </element>
+        </choice>
+    </define>
+    <define name="extraTerrestrialArea">
+        <choice>
+            <notAllowed/>
+            <element name="extraTerrestrialArea">
+                <ref name="hierarchicalPart"/>
+            </element>
+        </choice>
+    </define>
+    <define name="recordInfo">
+        <choice>
+            <notAllowed/>
+            <element name="recordInfo">
+                <optional>
+                    <attribute name="altRepGroup">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="displayLabel">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="languageAttributeGroup"/>
+                <oneOrMore>
+                    <choice>
+                        <ref name="recordContentSource"/>
+                        <ref name="recordCreationDate"/>
+                        <ref name="recordChangeDate"/>
+                        <ref name="recordIdentifier"/>
+                        <ref name="languageOfCataloging"/>
+                        <ref name="recordOrigin"/>
+                        <ref name="descriptionStandard"/>
+                        <ref name="recordInfoNote"/>
+                    </choice>
+                </oneOrMore>
+            </element>
+        </choice>
+    </define>
+    <define name="recordContentSource">
+        <choice>
+            <notAllowed/>
+            <element name="recordContentSource">
+                <ref name="stringPlusLanguagePlusAuthority"/>
+            </element>
+        </choice>
+    </define>
+    <define name="topic">
+        <choice>
+            <notAllowed/>
+            <element name="topic">
+                <ref name="stringPlusLanguagePlusAuthority"/>
+            </element>
+        </choice>
+    </define>
+    <define name="digitalOrigin">
+        <choice>
+            <notAllowed/>
+            <element name="digitalOrigin">
+                <choice>
+                    <value type="string">born digital</value>
+                    <value type="string">digitized other analog</value>
+                    <value type="string">reformatted digital</value>
+                    <value type="string">digitized microfilm</value>
+                </choice>
+            </element>
+        </choice>
+    </define>
+    <define name="scale">
+        <choice>
+            <notAllowed/>
+            <element name="scale">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="mods">
+        <choice>
+            <notAllowed/>
+            <element name="mods">
+                <optional>
+                    <attribute name="version">
+                        <choice>
+                            <value type="string">3.0</value>
+                            <value type="string">3.1</value>
+                            <value type="string">3.2</value>
+                            <value type="string">3.3</value>
+                            <value type="string">3.4</value>
+                            <value type="string">3.5</value>
+                            <value type="string">3.6</value>
+                            <value type="string">3.7</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="ID">
+                        <data type="ID"/>
+                    </attribute>
+                </optional>
+                <oneOrMore>
+                    <ref name="modsGroup"/>
+                </oneOrMore>
+            </element>
+        </choice>
+    </define>
+    <define name="altFormatAttributeGroup">
+        <optional>
+            <attribute name="contentType">
+                <data type="string"/>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="altFormat">
+                <data type="anyURI"/>
+            </attribute>
+        </optional>
+    </define>
+    <define name="itemIdentifier">
+        <choice>
+            <notAllowed/>
+            <element name="itemIdentifier">
+                <optional>
+                    <attribute name="type">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="anonymous3"/>
+            </element>
+        </choice>
+    </define>
+    <define name="coordinates">
+        <choice>
+            <notAllowed/>
+            <element name="coordinates">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="holdingSimple">
+        <choice>
+            <notAllowed/>
+            <element name="holdingSimple">
+                <oneOrMore>
+                    <ref name="copyInformation"/>
+                </oneOrMore>
+            </element>
+        </choice>
+    </define>
+    <define name="typeOfResource">
+        <choice>
+            <notAllowed/>
+            <element name="typeOfResource">
+                <optional>
+                    <attribute name="collection">
+                        <value>yes</value>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="manuscript">
+                        <value>yes</value>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="displayLabel">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="altRepGroup">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="usage">
+                        <value>primary</value>
+                    </attribute>
+                </optional>
+                <ref name="anonymous5"/>
+            </element>
+        </choice>
+    </define>
+    <define name="role">
+        <choice>
+            <notAllowed/>
+            <element name="role">
+                <oneOrMore>
+                    <ref name="roleTerm"/>
+                </oneOrMore>
+            </element>
+        </choice>
+    </define>
+    <define name="enumerationAndChronology">
+        <choice>
+            <notAllowed/>
+            <element name="enumerationAndChronology">
+                <optional>
+                    <attribute name="unitType">
+                        <choice>
+                            <value type="string">1</value>
+                            <value type="string">2</value>
+                            <value type="string">3</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <ref name="anonymous3"/>
+            </element>
+        </choice>
+    </define>
+    <define name="place">
+        <choice>
+            <notAllowed/>
+            <element name="place">
+                <optional>
+                    <attribute name="supplied">
+                        <value>yes</value>
+                    </attribute>
+                </optional>
+                <oneOrMore>
+                    <ref name="placeTerm"/>
+                </oneOrMore>
+            </element>
+        </choice>
+    </define>
+    <define name="languageTerm">
+        <choice>
+            <notAllowed/>
+            <element name="languageTerm">
+                <optional>
+                    <attribute name="authorityURI">
+                        <data type="anyURI"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="valueURI">
+                        <data type="anyURI"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="authority">
+                        <choice>
+                            <value type="string">rfc5646</value>
+                            <value type="string">rfc3066</value>
+                            <value type="string">rfc4646</value>
+                            <value type="string">iso639-2b</value>
+                            <value type="string">iso639-3</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="type">
+                        <choice>
+                            <value type="string">code</value>
+                            <value type="string">text</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <ref name="anonymous3"/>
+            </element>
+        </choice>
+    </define>
+    <define name="dateIssued">
+        <choice>
+            <notAllowed/>
+            <element name="dateIssued">
+                <ref name="dateDefinition"/>
+            </element>
+        </choice>
+    </define>
+    <define name="scriptTerm">
+        <choice>
+            <notAllowed/>
+            <element name="scriptTerm">
+                <optional>
+                    <attribute name="type">
+                        <choice>
+                            <value type="string">code</value>
+                            <value type="string">text</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <ref name="anonymous5"/>
+            </element>
+        </choice>
+    </define>
+    <define name="hierarchicalGeographic">
+        <choice>
+            <notAllowed/>
+            <element name="hierarchicalGeographic">
+                <ref name="authorityAttributeGroup"/>
+                <oneOrMore>
+                    <choice>
+                        <ref name="extraTerrestrialArea"/>
+                        <ref name="continent"/>
+                        <ref name="country"/>
+                        <ref name="province"/>
+                        <ref name="region"/>
+                        <ref name="state"/>
+                        <ref name="territory"/>
+                        <ref name="county"/>
+                        <ref name="city"/>
+                        <ref name="citySection"/>
+                        <ref name="island"/>
+                        <ref name="area"/>
+                    </choice>
+                </oneOrMore>
+            </element>
+        </choice>
+    </define>
+    <define name="noteDefinition">
+        <group>
+            <optional>
+                <attribute name="displayLabel">
+                    <data type="string"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="type">
+                    <data type="string"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="typeURI">
+                    <data type="anyURI"/>
+                </attribute>
+            </optional>
+            <ref name="simpleLink"/>
+            <optional>
+                <attribute name="ID">
+                    <data type="ID"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="altRepGroup">
+                    <data type="string"/>
+                </attribute>
+            </optional>
+            <ref name="anonymous3"/>
+        </group>
+        <empty/>
+    </define>
+    <define name="identifier">
+        <choice>
+            <notAllowed/>
+            <element name="identifier">
+                <ref name="identifierDefinition"/>
+            </element>
+        </choice>
+    </define>
+    <define name="citySection">
+        <choice>
+            <notAllowed/>
+            <element name="citySection">
+                <optional>
+                    <attribute name="citySectionType"/>
+                </optional>
+                <ref name="anonymous2"/>
+            </element>
+        </choice>
+    </define>
+    <define name="languageAttributeGroup">
+        <optional>
+            <attribute name="transliteration">
+                <data type="string"/>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="script">
+                <data type="string"/>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute>
+                <name ns="http://www.w3.org/XML/1998/namespace">lang</name>
+                <choice>
+                    <data type="language"/>
+                    <value type="string"></value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="lang">
+                <data type="string"/>
+            </attribute>
+        </optional>
+    </define>
+    <define name="genre">
+        <choice>
+            <notAllowed/>
+            <element name="genre">
+                <optional>
+                    <attribute name="type">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="displayLabel">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="altRepGroup">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="usage">
+                        <value>primary</value>
+                    </attribute>
+                </optional>
+                <ref name="anonymous5"/>
+            </element>
+        </choice>
+    </define>
+    <define name="form">
+        <choice>
+            <notAllowed/>
+            <element name="form">
+                <optional>
+                    <attribute name="type">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="anonymous5"/>
+            </element>
+        </choice>
+    </define>
+    <define name="number">
+        <choice>
+            <notAllowed/>
+            <element name="number">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="displayForm">
+        <choice>
+            <notAllowed/>
+            <element name="displayForm">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="anonymous2">
+        <optional>
+            <attribute name="level"/>
+        </optional>
+        <optional>
+            <attribute name="period"/>
+        </optional>
+        <ref name="authorityAttributeGroup"/>
+        <ref name="anonymous3"/>
+    </define>
+    <define name="originInfo">
+        <choice>
+            <notAllowed/>
+            <element name="originInfo">
+                <optional>
+                    <attribute name="eventType">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="altRepGroup">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="displayLabel">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="languageAttributeGroup"/>
+                <oneOrMore>
+                    <choice>
+                        <ref name="place"/>
+                        <ref name="publisher"/>
+                        <ref name="dateIssued"/>
+                        <ref name="dateCreated"/>
+                        <ref name="dateCaptured"/>
+                        <ref name="dateValid"/>
+                        <ref name="dateModified"/>
+                        <ref name="copyrightDate"/>
+                        <ref name="dateOther"/>
+                        <ref name="edition"/>
+                        <ref name="issuance"/>
+                        <ref name="frequency"/>
+                    </choice>
+                </oneOrMore>
+            </element>
+        </choice>
+    </define>
+    <define name="physicalLocation">
+        <choice>
+            <notAllowed/>
+            <element name="physicalLocation">
+                <ref name="simpleLink"/>
+                <optional>
+                    <attribute name="displayLabel">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="type">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="anonymous5"/>
+            </element>
+        </choice>
+    </define>
+    <define name="geographicCode">
+        <choice>
+            <notAllowed/>
+            <element name="geographicCode">
+                <optional>
+                    <attribute name="authorityURI">
+                        <data type="anyURI"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="valueURI">
+                        <data type="anyURI"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="authority">
+                        <choice>
+                            <value type="string">marcgac</value>
+                            <value type="string">marccountry</value>
+                            <value type="string">iso3166</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <ref name="anonymous3"/>
+            </element>
+        </choice>
+    </define>
+    <define name="cartographics">
+        <choice>
+            <notAllowed/>
+            <element name="cartographics">
+                <ref name="authorityAttributeGroup"/>
+                <optional>
+                    <ref name="scale"/>
+                </optional>
+                <optional>
+                    <ref name="projection"/>
+                </optional>
+                <zeroOrMore>
+                    <ref name="coordinates"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="cartographicExtension"/>
+                </zeroOrMore>
+            </element>
+        </choice>
+    </define>
+    <define name="recordIdentifier">
+        <choice>
+            <notAllowed/>
+            <element name="recordIdentifier">
+                <optional>
+                    <attribute name="source">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="anonymous3"/>
+            </element>
+        </choice>
+    </define>
+    <define name="county">
+        <choice>
+            <notAllowed/>
+            <element name="county">
+                <ref name="hierarchicalPart"/>
+            </element>
+        </choice>
+    </define>
+    <define name="partNumber">
+        <choice>
+            <notAllowed/>
+            <element name="partNumber">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="city">
+        <choice>
+            <notAllowed/>
+            <element name="city">
+                <ref name="hierarchicalPart"/>
+            </element>
+        </choice>
+    </define>
+    <define name="titleInfo">
+        <choice>
+            <notAllowed/>
+            <element name="titleInfo">
+                <optional>
+                    <attribute name="displayLabel">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="languageAttributeGroup"/>
+                <ref name="simpleLink"/>
+                <ref name="authorityAttributeGroup"/>
+                <optional>
+                    <attribute name="ID">
+                        <data type="ID"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="usage">
+                        <value>primary</value>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="nameTitleGroup">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="altFormatAttributeGroup"/>
+                <optional>
+                    <attribute name="altRepGroup">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="supplied">
+                        <value>yes</value>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="otherType"/>
+                </optional>
+                <optional>
+                    <attribute name="type">
+                        <choice>
+                            <value type="string">uniform</value>
+                            <value type="string">alternative</value>
+                            <value type="string">translated</value>
+                            <value type="string">abbreviated</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <zeroOrMore>
+                    <choice>
+                        <ref name="title"/>
+                        <ref name="subTitle"/>
+                        <ref name="partNumber"/>
+                        <ref name="partName"/>
+                        <ref name="nonSort"/>
+                    </choice>
+                </zeroOrMore>
+            </element>
+        </choice>
+    </define>
+    <define name="continent">
+        <choice>
+            <notAllowed/>
+            <element name="continent">
+                <ref name="hierarchicalPart"/>
+            </element>
+        </choice>
+    </define>
+    <define name="roleTerm">
+        <choice>
+            <notAllowed/>
+            <element name="roleTerm">
+                <optional>
+                    <attribute name="type">
+                        <choice>
+                            <value type="string">code</value>
+                            <value type="string">text</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <ref name="anonymous5"/>
+            </element>
+        </choice>
+    </define>
+    <define name="relatedItem">
+        <choice>
+            <notAllowed/>
+            <element name="relatedItem">
+                <ref name="simpleLink"/>
+                <optional>
+                    <attribute name="ID">
+                        <data type="ID"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="displayLabel">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="otherTypeURI">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="otherTypeAuthURI">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="otherTypeAuth">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="otherType">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="type">
+                        <choice>
+                            <value type="string">isReferencedBy</value>
+                            <value type="string">reviewOf</value>
+                            <value type="string">original</value>
+                            <value type="string">references</value>
+                            <value type="string">constituent</value>
+                            <value type="string">series</value>
+                            <value type="string">host</value>
+                            <value type="string">otherFormat</value>
+                            <value type="string">preceding</value>
+                            <value type="string">succeeding</value>
+                            <value type="string">otherVersion</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <zeroOrMore>
+                    <ref name="modsGroup"/>
+                </zeroOrMore>
+            </element>
+        </choice>
+    </define>
+    <define name="hierarchicalPart">
+        <ref name="anonymous2"/>
+        <empty/>
+    </define>
+    <define name="accessCondition">
+        <choice>
+            <notAllowed/>
+            <element name="accessCondition">
+                <mixed>
+                    <mixed>
+                        <ref name="anonymous0"/>
+                        <ref name="simpleLink"/>
+                        <ref name="languageAttributeGroup"/>
+                        <optional>
+                            <attribute name="type">
+                                <data type="string"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="altRepGroup">
+                                <data type="string"/>
+                            </attribute>
+                        </optional>
+                        <ref name="altFormatAttributeGroup"/>
+                    </mixed>
+                </mixed>
+            </element>
+        </choice>
+    </define>
+    <define name="list">
+        <choice>
+            <notAllowed/>
+            <element name="list">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="classification">
+        <choice>
+            <notAllowed/>
+            <element name="classification">
+                <optional>
+                    <attribute name="edition">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="displayLabel">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="altRepGroup">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="usage">
+                        <value>primary</value>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="generator">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="anonymous5"/>
+            </element>
+        </choice>
+    </define>
+    <define name="anonymous3">
+        <ref name="languageAttributeGroup"/>
+        <data type="string"/>
+    </define>
+    <define name="total">
+        <choice>
+            <notAllowed/>
+            <element name="total">
+                <data type="positiveInteger"/>
+            </element>
+        </choice>
+    </define>
+    <define name="occupation">
+        <choice>
+            <notAllowed/>
+            <element name="occupation">
+                <ref name="stringPlusLanguagePlusAuthority"/>
+            </element>
+        </choice>
+    </define>
+    <define name="extent">
+        <choice>
+            <notAllowed/>
+            <element name="extent">
+                <optional>
+                    <attribute name="unit"/>
+                </optional>
+                <ref name="anonymous1"/>
+            </element>
+        </choice>
+    </define>
+    <define name="url">
+        <choice>
+            <notAllowed/>
+            <element name="url">
+                <optional>
+                    <attribute name="dateLastAccessed">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="displayLabel">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="note">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="access">
+                        <choice>
+                            <value type="string">preview</value>
+                            <value type="string">raw object</value>
+                            <value type="string">object in context</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="usage">
+                        <choice>
+                            <value type="string">primary display</value>
+                            <value type="string">primary</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <data type="anyURI"/>
+            </element>
+        </choice>
+    </define>
+    <define name="part">
+        <choice>
+            <notAllowed/>
+            <element name="part">
+                <optional>
+                    <attribute name="altRepGroup">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="displayLabel">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="languageAttributeGroup"/>
+                <optional>
+                    <attribute name="order">
+                        <data type="integer"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="type">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="ID">
+                        <data type="ID"/>
+                    </attribute>
+                </optional>
+                <zeroOrMore>
+                    <choice>
+                        <ref name="detail"/>
+                        <element name="extent">
+                            <optional>
+                                <attribute name="unit">
+                                    <data type="string"/>
+                                </attribute>
+                            </optional>
+                            <optional>
+                                <ref name="start"/>
+                            </optional>
+                            <optional>
+                                <ref name="end"/>
+                            </optional>
+                            <optional>
+                                <ref name="total"/>
+                            </optional>
+                            <optional>
+                                <ref name="list"/>
+                            </optional>
+                        </element>
+                        <ref name="date"/>
+                        <ref name="text"/>
+                    </choice>
+                </zeroOrMore>
+            </element>
+        </choice>
+    </define>
+    <define name="region">
+        <choice>
+            <notAllowed/>
+            <element name="region">
+                <optional>
+                    <attribute name="regionType"/>
+                </optional>
+                <ref name="anonymous2"/>
+            </element>
+        </choice>
+    </define>
+    <define name="country">
+        <choice>
+            <notAllowed/>
+            <element name="country">
+                <ref name="hierarchicalPart"/>
+            </element>
+        </choice>
+    </define>
+    <define name="authorityAttributeGroup">
+        <optional>
+            <attribute name="valueURI">
+                <data type="anyURI"/>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="authorityURI">
+                <data type="anyURI"/>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="authority">
+                <data type="string"/>
+            </attribute>
+        </optional>
+    </define>
+    <define name="recordChangeDate">
+        <choice>
+            <notAllowed/>
+            <element name="recordChangeDate">
+                <ref name="dateDefinition"/>
+            </element>
+        </choice>
+    </define>
+    <define name="abstract">
+        <choice>
+            <notAllowed/>
+            <element name="abstract">
+                <optional>
+                    <attribute name="displayLabel">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="type">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="simpleLink"/>
+                <optional>
+                    <attribute name="shareable">
+                        <value>no</value>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="altRepGroup">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="altFormatAttributeGroup"/>
+                <ref name="anonymous3"/>
+            </element>
+        </choice>
+    </define>
+    <define name="subject">
+        <choice>
+            <notAllowed/>
+            <element name="subject">
+                <optional>
+                    <attribute name="usage">
+                        <value>primary</value>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="altRepGroup">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="displayLabel">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="simpleLink"/>
+                <ref name="languageAttributeGroup"/>
+                <ref name="authorityAttributeGroup"/>
+                <optional>
+                    <attribute name="ID">
+                        <data type="ID"/>
+                    </attribute>
+                </optional>
+                <zeroOrMore>
+                    <choice>
+                        <ref name="topic"/>
+                        <ref name="geographic"/>
+                        <ref name="temporal"/>
+                        <element name="titleInfo">
+                            <optional>
+                                <attribute name="type">
+                                    <choice>
+                                    <value type="string">uniform</value>
+                                    <value type="string">alternative</value>
+                                    <value type="string">translated</value>
+                                    <value type="string">abbreviated</value>
+                                    </choice>
+                                </attribute>
+                            </optional>
+                            <optional>
+                                <attribute name="displayLabel">
+                                    <data type="string"/>
+                                </attribute>
+                            </optional>
+                            <ref name="languageAttributeGroup"/>
+                            <ref name="simpleLink"/>
+                            <ref name="authorityAttributeGroup"/>
+                            <optional>
+                                <attribute name="ID">
+                                    <data type="ID"/>
+                                </attribute>
+                            </optional>
+                            <zeroOrMore>
+                                <choice>
+                                    <ref name="title"/>
+                                    <ref name="subTitle"/>
+                                    <ref name="partNumber"/>
+                                    <ref name="partName"/>
+                                    <ref name="nonSort"/>
+                                </choice>
+                            </zeroOrMore>
+                        </element>
+                        <element name="name">
+                            <optional>
+                                <attribute name="displayLabel">
+                                    <data type="string"/>
+                                </attribute>
+                            </optional>
+                            <ref name="languageAttributeGroup"/>
+                            <ref name="simpleLink"/>
+                            <ref name="authorityAttributeGroup"/>
+                            <optional>
+                                <attribute name="ID">
+                                    <data type="ID"/>
+                                </attribute>
+                            </optional>
+                            <optional>
+                                <attribute name="type">
+                                    <choice>
+                                    <value type="string">conference</value>
+                                    <value type="string">corporate</value>
+                                    <value type="string">personal</value>
+                                    <value type="string">family</value>
+                                    </choice>
+                                </attribute>
+                            </optional>
+                            <zeroOrMore>
+                                <choice>
+                                    <ref name="namePart"/>
+                                    <ref name="displayForm"/>
+                                    <ref name="affiliation"/>
+                                    <ref name="role"/>
+                                    <ref name="description"/>
+                                    <ref name="nameIdentifier"/>
+                                </choice>
+                            </zeroOrMore>
+                        </element>
+                        <ref name="geographicCode"/>
+                        <ref name="hierarchicalGeographic"/>
+                        <ref name="cartographics"/>
+                        <ref name="occupation"/>
+                        <ref name="genre"/>
+                    </choice>
+                </zeroOrMore>
+            </element>
+        </choice>
+    </define>
+    <define name="temporal">
+        <choice>
+            <notAllowed/>
+            <element name="temporal">
+                <ref name="authorityAttributeGroup"/>
+                <ref name="anonymous4"/>
+            </element>
+        </choice>
+    </define>
+    <define name="issuance">
+        <choice>
+            <notAllowed/>
+            <element name="issuance">
+                <choice>
+                    <value type="string">serial</value>
+                    <value type="string">multipart monograph</value>
+                    <value type="string">integrating resource</value>
+                    <value type="string">continuing</value>
+                    <value type="string">single unit</value>
+                    <value type="string">monographic</value>
+                </choice>
+            </element>
+        </choice>
+    </define>
+    <define name="territory">
+        <choice>
+            <notAllowed/>
+            <element name="territory">
+                <ref name="hierarchicalPart"/>
+            </element>
+        </choice>
+    </define>
+    <define name="identifierDefinition">
+        <group>
+            <optional>
+                <attribute name="displayLabel">
+                    <data type="string"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="type">
+                    <data type="string"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="typeURI">
+                    <data type="anyURI"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="invalid">
+                    <value>yes</value>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="altRepGroup">
+                    <data type="string"/>
+                </attribute>
+            </optional>
+            <ref name="anonymous3"/>
+        </group>
+        <empty/>
+    </define>
+    <define name="island">
+        <choice>
+            <notAllowed/>
+            <element name="island">
+                <ref name="hierarchicalPart"/>
+            </element>
+        </choice>
+    </define>
+    <define name="partName">
+        <choice>
+            <notAllowed/>
+            <element name="partName">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="dateDefinition">
+        <ref name="anonymous4"/>
+        <empty/>
+    </define>
+    <define name="languageDefinition">
+        <group>
+            <optional>
+                <attribute name="usage">
+                    <value>primary</value>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="altRepGroup">
+                    <data type="string"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="displayLabel">
+                    <data type="string"/>
+                </attribute>
+            </optional>
+            <ref name="languageAttributeGroup"/>
+            <optional>
+                <attribute name="objectPart">
+                    <data type="string"/>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <ref name="languageTerm"/>
+            </oneOrMore>
+            <zeroOrMore>
+                <ref name="scriptTerm"/>
+            </zeroOrMore>
+        </group>
+        <empty/>
+    </define>
+    <define name="modsCollection">
+        <choice>
+            <notAllowed/>
+            <element name="modsCollection">
+                <oneOrMore>
+                    <ref name="mods"/>
+                </oneOrMore>
+            </element>
+        </choice>
+    </define>
+    <define name="frequency">
+        <choice>
+            <notAllowed/>
+            <element name="frequency">
+                <ref name="stringPlusLanguagePlusAuthority"/>
+            </element>
+        </choice>
+    </define>
+    <define name="targetAudience">
+        <choice>
+            <notAllowed/>
+            <element name="targetAudience">
+                <optional>
+                    <attribute name="displayLabel">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="altRepGroup">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="anonymous5"/>
+            </element>
+        </choice>
+    </define>
+    <define name="affiliation">
+        <choice>
+            <notAllowed/>
+            <element name="affiliation">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="recordCreationDate">
+        <choice>
+            <notAllowed/>
+            <element name="recordCreationDate">
+                <ref name="dateDefinition"/>
+            </element>
+        </choice>
+    </define>
+    <define name="state">
+        <choice>
+            <notAllowed/>
+            <element name="state">
+                <ref name="hierarchicalPart"/>
+            </element>
+        </choice>
+    </define>
+    <define name="note">
+        <choice>
+            <notAllowed/>
+            <element name="note">
+                <ref name="noteDefinition"/>
+            </element>
+        </choice>
+    </define>
+    <define name="dateCaptured">
+        <choice>
+            <notAllowed/>
+            <element name="dateCaptured">
+                <ref name="dateDefinition"/>
+            </element>
+        </choice>
+    </define>
+    <define name="stringPlusLanguagePlusAuthority">
+        <ref name="anonymous5"/>
+        <empty/>
+    </define>
+    <define name="anonymous4">
+        <optional>
+            <attribute name="encoding">
+                <choice>
+                    <value type="string">w3cdtf</value>
+                    <value type="string">temper</value>
+                    <value type="string">iso8601</value>
+                    <value type="string">marc</value>
+                    <value type="string">edtf</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="qualifier">
+                <choice>
+                    <value type="string">questionable</value>
+                    <value type="string">approximate</value>
+                    <value type="string">inferred</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="point">
+                <choice>
+                    <value type="string">start</value>
+                    <value type="string">end</value>
+                </choice>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="keyDate">
+                <value>yes</value>
+            </attribute>
+        </optional>
+        <optional>
+            <attribute name="calendar">
+                <data type="string"/>
+            </attribute>
+        </optional>
+        <ref name="anonymous3"/>
+    </define>
+    <define name="holdingExternal">
+        <choice>
+            <notAllowed/>
+            <element name="holdingExternal">
+                <ref name="extensionDefinition"/>
+            </element>
+        </choice>
+    </define>
+    <define name="date">
+        <choice>
+            <notAllowed/>
+            <element name="date">
+                <ref name="dateDefinition"/>
+            </element>
+        </choice>
+    </define>
+    <define name="dateCreated">
+        <choice>
+            <notAllowed/>
+            <element name="dateCreated">
+                <ref name="dateDefinition"/>
+            </element>
+        </choice>
+    </define>
+    <define name="languageOfCataloging">
+        <choice>
+            <notAllowed/>
+            <element name="languageOfCataloging">
+                <ref name="languageDefinition"/>
+            </element>
+        </choice>
+    </define>
+    <define name="description">
+        <choice>
+            <notAllowed/>
+            <element name="description">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="dateOther">
+        <choice>
+            <notAllowed/>
+            <element name="dateOther">
+                <optional>
+                    <attribute name="type">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="anonymous4"/>
+            </element>
+        </choice>
+    </define>
+    <define name="subTitle">
+        <choice>
+            <notAllowed/>
+            <element name="subTitle">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="placeTerm">
+        <choice>
+            <notAllowed/>
+            <element name="placeTerm">
+                <optional>
+                    <attribute name="authorityURI">
+                        <data type="anyURI"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="valueURI">
+                        <data type="anyURI"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="authority">
+                        <choice>
+                            <value type="string">marcgac</value>
+                            <value type="string">marccountry</value>
+                            <value type="string">iso3166</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="type">
+                        <choice>
+                            <value type="string">code</value>
+                            <value type="string">text</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <ref name="anonymous3"/>
+            </element>
+        </choice>
+    </define>
+    <define name="etal">
+        <choice>
+            <notAllowed/>
+            <element name="etal">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="modsGroup">
+        <choice>
+            <ref name="abstract"/>
+            <ref name="accessCondition"/>
+            <ref name="classification"/>
+            <ref name="extension"/>
+            <ref name="genre"/>
+            <ref name="identifier"/>
+            <ref name="language"/>
+            <ref name="location"/>
+            <ref name="name"/>
+            <ref name="note"/>
+            <ref name="originInfo"/>
+            <ref name="part"/>
+            <ref name="physicalDescription"/>
+            <ref name="recordInfo"/>
+            <ref name="relatedItem"/>
+            <ref name="subject"/>
+            <ref name="tableOfContents"/>
+            <ref name="targetAudience"/>
+            <ref name="titleInfo"/>
+            <ref name="typeOfResource"/>
+        </choice>
+    </define>
+    <define name="dateValid">
+        <choice>
+            <notAllowed/>
+            <element name="dateValid">
+                <ref name="dateDefinition"/>
+            </element>
+        </choice>
+    </define>
+    <define name="any_lax___any_">
+        <choice>
+            <element>
+                <anyName>
+                    <except>
+                        <name>classification</name>
+                        <name>holdingSimple</name>
+                        <name>identifier</name>
+                        <name>recordIdentifier</name>
+                        <name>physicalDescription</name>
+                        <name>detail</name>
+                        <name>itemIdentifier</name>
+                        <name>etal</name>
+                        <name>recordOrigin</name>
+                        <name>typeOfResource</name>
+                        <name>caption</name>
+                        <name>county</name>
+                        <name>recordInfoNote</name>
+                        <name>scriptTerm</name>
+                        <name>occupation</name>
+                        <name>extent</name>
+                        <name>temporal</name>
+                        <name>roleTerm</name>
+                        <name>cartographics</name>
+                        <name>state</name>
+                        <name>text</name>
+                        <name>province</name>
+                        <name>number</name>
+                        <name>url</name>
+                        <name>abstract</name>
+                        <name>reformattingQuality</name>
+                        <name>coordinates</name>
+                        <name>accessCondition</name>
+                        <name>physicalLocation</name>
+                        <name>geographicCode</name>
+                        <name>dateIssued</name>
+                        <name>partNumber</name>
+                        <name>copyInformation</name>
+                        <name>enumerationAndChronology</name>
+                        <name>dateValid</name>
+                        <name>dateOther</name>
+                        <name>modsCollection</name>
+                        <name>city</name>
+                        <name>role</name>
+                        <name>extension</name>
+                        <name>continent</name>
+                        <name>place</name>
+                        <name>genre</name>
+                        <name>originInfo</name>
+                        <name>recordInfo</name>
+                        <name>languageOfCataloging</name>
+                        <name>citySection</name>
+                        <name>descriptionStandard</name>
+                        <name>namePart</name>
+                        <name>list</name>
+                        <name>cartographicExtension</name>
+                        <name>island</name>
+                        <name>shelfLocator</name>
+                        <name>extraTerrestrialArea</name>
+                        <name>area</name>
+                        <name>recordContentSource</name>
+                        <name>nameIdentifier</name>
+                        <name>tableOfContents</name>
+                        <name>region</name>
+                        <name>subLocation</name>
+                        <name>topic</name>
+                        <name>publisher</name>
+                        <name>name</name>
+                        <name>languageTerm</name>
+                        <name>digitalOrigin</name>
+                        <name>frequency</name>
+                        <name>displayForm</name>
+                        <name>relatedItem</name>
+                        <name>language</name>
+                        <name>titleInfo</name>
+                        <name>nonSort</name>
+                        <name>subject</name>
+                        <name>hierarchicalGeographic</name>
+                        <name>mods</name>
+                        <name>country</name>
+                        <name>internetMediaType</name>
+                        <name>date</name>
+                        <name>holdingExternal</name>
+                        <name>dateCaptured</name>
+                        <name>affiliation</name>
+                        <name>subTitle</name>
+                        <name>geographic</name>
+                        <name>recordChangeDate</name>
+                        <name>dateModified</name>
+                        <name>start</name>
+                        <name>territory</name>
+                        <name>copyrightDate</name>
+                        <name>location</name>
+                        <name>issuance</name>
+                        <name>form</name>
+                        <name>targetAudience</name>
+                        <name>partName</name>
+                        <name>title</name>
+                        <name>edition</name>
+                        <name>description</name>
+                        <name>scale</name>
+                        <name>part</name>
+                        <name>placeTerm</name>
+                        <name>note</name>
+                        <name>alternativeName</name>
+                        <name>projection</name>
+                        <name>electronicLocator</name>
+                        <name>end</name>
+                        <name>recordCreationDate</name>
+                        <name>dateCreated</name>
+                        <name>total</name>
+                    </except>
+                </anyName>
+                <mixed>
+                    <zeroOrMore>
+                        <choice>
+                            <attribute>
+                                <anyName/>
+                            </attribute>
+                            <ref name="any_lax___any_"/>
+                        </choice>
+                    </zeroOrMore>
+                </mixed>
+            </element>
+            <ref name="extent"/>
+            <ref name="occupation"/>
+            <ref name="scriptTerm"/>
+            <ref name="recordInfoNote"/>
+            <ref name="county"/>
+            <ref name="caption"/>
+            <ref name="typeOfResource"/>
+            <ref name="number"/>
+            <ref name="province"/>
+            <ref name="text"/>
+            <ref name="state"/>
+            <ref name="cartographics"/>
+            <ref name="roleTerm"/>
+            <ref name="temporal"/>
+            <ref name="identifier"/>
+            <ref name="holdingSimple"/>
+            <ref name="classification"/>
+            <ref name="recordOrigin"/>
+            <ref name="etal"/>
+            <ref name="itemIdentifier"/>
+            <ref name="detail"/>
+            <ref name="physicalDescription"/>
+            <ref name="recordIdentifier"/>
+            <ref name="continent"/>
+            <ref name="extension"/>
+            <ref name="role"/>
+            <ref name="city"/>
+            <ref name="modsCollection"/>
+            <ref name="dateOther"/>
+            <ref name="dateValid"/>
+            <ref name="citySection"/>
+            <ref name="languageOfCataloging"/>
+            <ref name="recordInfo"/>
+            <ref name="genre"/>
+            <ref name="originInfo"/>
+            <ref name="place"/>
+            <ref name="dateIssued"/>
+            <ref name="geographicCode"/>
+            <ref name="physicalLocation"/>
+            <ref name="accessCondition"/>
+            <ref name="coordinates"/>
+            <ref name="reformattingQuality"/>
+            <ref name="abstract"/>
+            <ref name="url"/>
+            <ref name="enumerationAndChronology"/>
+            <ref name="copyInformation"/>
+            <ref name="partNumber"/>
+            <ref name="date"/>
+            <ref name="internetMediaType"/>
+            <ref name="country"/>
+            <ref name="mods"/>
+            <ref name="hierarchicalGeographic"/>
+            <ref name="subject"/>
+            <ref name="nonSort"/>
+            <ref name="titleInfo"/>
+            <ref name="language"/>
+            <ref name="relatedItem"/>
+            <ref name="displayForm"/>
+            <ref name="frequency"/>
+            <ref name="geographic"/>
+            <ref name="subTitle"/>
+            <ref name="affiliation"/>
+            <ref name="dateCaptured"/>
+            <ref name="holdingExternal"/>
+            <ref name="area"/>
+            <ref name="extraTerrestrialArea"/>
+            <ref name="shelfLocator"/>
+            <ref name="island"/>
+            <ref name="list"/>
+            <ref name="cartographicExtension"/>
+            <ref name="namePart"/>
+            <ref name="descriptionStandard"/>
+            <ref name="languageTerm"/>
+            <ref name="digitalOrigin"/>
+            <ref name="name"/>
+            <ref name="publisher"/>
+            <ref name="topic"/>
+            <ref name="subLocation"/>
+            <ref name="region"/>
+            <ref name="tableOfContents"/>
+            <ref name="nameIdentifier"/>
+            <ref name="recordContentSource"/>
+            <ref name="note"/>
+            <ref name="placeTerm"/>
+            <ref name="part"/>
+            <ref name="description"/>
+            <ref name="edition"/>
+            <ref name="scale"/>
+            <ref name="title"/>
+            <ref name="partName"/>
+            <ref name="total"/>
+            <ref name="dateCreated"/>
+            <ref name="recordCreationDate"/>
+            <ref name="end"/>
+            <ref name="electronicLocator"/>
+            <ref name="projection"/>
+            <ref name="alternativeName"/>
+            <ref name="start"/>
+            <ref name="dateModified"/>
+            <ref name="recordChangeDate"/>
+            <ref name="targetAudience"/>
+            <ref name="form"/>
+            <ref name="issuance"/>
+            <ref name="location"/>
+            <ref name="copyrightDate"/>
+            <ref name="territory"/>
+        </choice>
+    </define>
+    <define name="detail">
+        <choice>
+            <notAllowed/>
+            <element name="detail">
+                <optional>
+                    <attribute name="level">
+                        <data type="positiveInteger"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="type">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <oneOrMore>
+                    <choice>
+                        <ref name="number"/>
+                        <ref name="caption"/>
+                        <ref name="title"/>
+                    </choice>
+                </oneOrMore>
+            </element>
+        </choice>
+    </define>
+    <define name="name">
+        <choice>
+            <notAllowed/>
+            <element name="name">
+                <optional>
+                    <attribute name="type">
+                        <choice>
+                            <value type="string">conference</value>
+                            <value type="string">corporate</value>
+                            <value type="string">personal</value>
+                            <value type="string">family</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="usage">
+                        <value>primary</value>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="nameTitleGroup">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="altRepGroup">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="displayLabel">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="languageAttributeGroup"/>
+                <ref name="simpleLink"/>
+                <ref name="authorityAttributeGroup"/>
+                <optional>
+                    <attribute name="ID">
+                        <data type="ID"/>
+                    </attribute>
+                </optional>
+                <choice>
+                    <oneOrMore>
+                        <choice>
+                            <ref name="namePart"/>
+                            <ref name="displayForm"/>
+                            <ref name="affiliation"/>
+                            <ref name="role"/>
+                            <ref name="description"/>
+                            <ref name="nameIdentifier"/>
+                            <ref name="alternativeName"/>
+                        </choice>
+                    </oneOrMore>
+                    <empty/>
+                    <group>
+                        <ref name="etal"/>
+                        <zeroOrMore>
+                            <choice>
+                                <ref name="affiliation"/>
+                                <ref name="role"/>
+                                <ref name="description"/>
+                            </choice>
+                        </zeroOrMore>
+                    </group>
+                </choice>
+            </element>
+        </choice>
+    </define>
+    <define name="nonSort">
+        <choice>
+            <notAllowed/>
+            <element name="nonSort">
+                <optional>
+                    <attribute>
+                        <name ns="http://www.w3.org/XML/1998/namespace">space</name>
+                        <choice>
+                            <value type="NCName">default</value>
+                            <value type="NCName">preserve</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <ref name="anonymous3"/>
+            </element>
+        </choice>
+    </define>
+    <define name="province">
+        <choice>
+            <notAllowed/>
+            <element name="province">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="area">
+        <choice>
+            <notAllowed/>
+            <element name="area">
+                <optional>
+                    <attribute name="areaType"/>
+                </optional>
+                <ref name="anonymous2"/>
+            </element>
+        </choice>
+    </define>
+    <define name="dateModified">
+        <choice>
+            <notAllowed/>
+            <element name="dateModified">
+                <ref name="dateDefinition"/>
+            </element>
+        </choice>
+    </define>
+    <define name="caption">
+        <choice>
+            <notAllowed/>
+            <element name="caption">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="nameIdentifier">
+        <choice>
+            <notAllowed/>
+            <element name="nameIdentifier">
+                <ref name="identifierDefinition"/>
+            </element>
+        </choice>
+    </define>
+    <define name="alternativeName">
+        <choice>
+            <notAllowed/>
+            <element name="alternativeName">
+                <optional>
+                    <attribute name="altType">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="displayLabel">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="languageAttributeGroup"/>
+                <ref name="simpleLink"/>
+                <zeroOrMore>
+                    <choice>
+                        <ref name="namePart"/>
+                        <ref name="displayForm"/>
+                        <ref name="affiliation"/>
+                        <ref name="role"/>
+                        <ref name="description"/>
+                        <ref name="nameIdentifier"/>
+                    </choice>
+                </zeroOrMore>
+            </element>
+        </choice>
+    </define>
+    <define name="descriptionStandard">
+        <choice>
+            <notAllowed/>
+            <element name="descriptionStandard">
+                <ref name="stringPlusLanguagePlusAuthority"/>
+            </element>
+        </choice>
+    </define>
+    <define name="title">
+        <choice>
+            <notAllowed/>
+            <element name="title">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="copyInformation">
+        <choice>
+            <notAllowed/>
+            <element name="copyInformation">
+                <optional>
+                    <ref name="form"/>
+                </optional>
+                <zeroOrMore>
+                    <ref name="subLocation"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="shelfLocator"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="electronicLocator"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <element name="note">
+                        <optional>
+                            <attribute name="displayLabel">
+                                <data type="string"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="type">
+                                <data type="string"/>
+                            </attribute>
+                        </optional>
+                        <ref name="simpleLink"/>
+                        <optional>
+                            <attribute name="ID">
+                                <data type="ID"/>
+                            </attribute>
+                        </optional>
+                        <ref name="anonymous3"/>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="enumerationAndChronology"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="itemIdentifier"/>
+                </zeroOrMore>
+            </element>
+        </choice>
+    </define>
+    <define name="language">
+        <choice>
+            <notAllowed/>
+            <element name="language">
+                <ref name="languageDefinition"/>
+            </element>
+        </choice>
+    </define>
+    <define name="geographic">
+        <choice>
+            <notAllowed/>
+            <element name="geographic">
+                <ref name="stringPlusLanguagePlusAuthority"/>
+            </element>
+        </choice>
+    </define>
+    <define name="start">
+        <choice>
+            <notAllowed/>
+            <element name="start">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="location">
+        <choice>
+            <notAllowed/>
+            <element name="location">
+                <optional>
+                    <attribute name="altRepGroup">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="displayLabel">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="languageAttributeGroup"/>
+                <zeroOrMore>
+                    <ref name="physicalLocation"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="shelfLocator"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="url"/>
+                </zeroOrMore>
+                <optional>
+                    <ref name="holdingSimple"/>
+                </optional>
+                <optional>
+                    <ref name="holdingExternal"/>
+                </optional>
+            </element>
+        </choice>
+    </define>
+    <define name="anonymous5">
+        <ref name="authorityAttributeGroup"/>
+        <ref name="anonymous3"/>
+    </define>
+    <define name="recordOrigin">
+        <choice>
+            <notAllowed/>
+            <element name="recordOrigin">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="tableOfContents">
+        <choice>
+            <notAllowed/>
+            <element name="tableOfContents">
+                <optional>
+                    <attribute name="displayLabel">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="type">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="simpleLink"/>
+                <optional>
+                    <attribute name="shareable">
+                        <value>no</value>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="altRepGroup">
+                        <data type="string"/>
+                    </attribute>
+                </optional>
+                <ref name="altFormatAttributeGroup"/>
+                <ref name="anonymous3"/>
+            </element>
+        </choice>
+    </define>
+    <define name="subLocation">
+        <choice>
+            <notAllowed/>
+            <element name="subLocation">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+    <define name="electronicLocator">
+        <choice>
+            <notAllowed/>
+            <element name="electronicLocator">
+                <ref name="stringPlusLanguage"/>
+            </element>
+        </choice>
+    </define>
+</grammar>

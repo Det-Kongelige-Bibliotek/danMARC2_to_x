@@ -1,0 +1,1181 @@
+default namespace = "http://www.loc.gov/mods/v3"
+namespace ns1 = "http://www.w3.org/1999/xlink"
+
+start =
+  extent
+  | occupation
+  | scriptTerm
+  | recordInfoNote
+  | county
+  | caption
+  | typeOfResource
+  | number
+  | province
+  | \text
+  | state
+  | cartographics
+  | roleTerm
+  | temporal
+  | identifier
+  | holdingSimple
+  | classification
+  | recordOrigin
+  | etal
+  | itemIdentifier
+  | detail
+  | physicalDescription
+  | recordIdentifier
+  | continent
+  | extension
+  | role
+  | city
+  | modsCollection
+  | dateOther
+  | dateValid
+  | citySection
+  | languageOfCataloging
+  | recordInfo
+  | genre
+  | originInfo
+  | place
+  | dateIssued
+  | geographicCode
+  | physicalLocation
+  | accessCondition
+  | coordinates
+  | reformattingQuality
+  | abstract
+  | url
+  | enumerationAndChronology
+  | copyInformation
+  | partNumber
+  | date
+  | internetMediaType
+  | country
+  | mods
+  | hierarchicalGeographic
+  | subject
+  | nonSort
+  | titleInfo
+  | language
+  | relatedItem
+  | displayForm
+  | frequency
+  | geographic
+  | subTitle
+  | affiliation
+  | dateCaptured
+  | holdingExternal
+  | area
+  | extraTerrestrialArea
+  | shelfLocator
+  | island
+  | \list
+  | cartographicExtension
+  | namePart
+  | descriptionStandard
+  | languageTerm
+  | digitalOrigin
+  | name
+  | publisher
+  | topic
+  | subLocation
+  | region
+  | tableOfContents
+  | nameIdentifier
+  | recordContentSource
+  | note
+  | placeTerm
+  | part
+  | description
+  | edition
+  | scale
+  | title
+  | partName
+  | total
+  | dateCreated
+  | recordCreationDate
+  | end
+  | electronicLocator
+  | projection
+  | alternativeName
+  | \start
+  | dateModified
+  | recordChangeDate
+  | targetAudience
+  | form
+  | issuance
+  | location
+  | copyrightDate
+  | territory
+reformattingQuality =
+  notAllowed
+  | element reformattingQuality {
+      xsd:string "preservation"
+      | xsd:string "access"
+      | xsd:string "replacement"
+    }
+edition =
+  notAllowed
+  | element edition { anonymous1 }
+projection =
+  notAllowed
+  | element projection { stringPlusLanguage }
+\text =
+  notAllowed
+  | element text {
+      attribute displayLabel { xsd:string }?,
+      attribute type { xsd:string }?,
+      simpleLink,
+      anonymous3
+    }
+publisher =
+  notAllowed
+  | element publisher { authorityAttributeGroup, anonymous1 }
+anonymous0 =
+  mixed {
+    attribute displayLabel { xsd:string }?,
+    any_lax___any_*
+  }
+end =
+  notAllowed
+  | element end { stringPlusLanguage }
+physicalDescription =
+  notAllowed
+  | element physicalDescription {
+      attribute altRepGroup { xsd:string }?,
+      attribute displayLabel { xsd:string }?,
+      languageAttributeGroup,
+      (form
+       | reformattingQuality
+       | internetMediaType
+       | extent
+       | digitalOrigin
+       | element note {
+           attribute displayLabel { xsd:string }?,
+           attribute type { xsd:string }?,
+           attribute typeURI { xsd:anyURI }?,
+           simpleLink,
+           attribute ID { xsd:ID }?,
+           anonymous3
+         })+
+    }
+extension =
+  notAllowed
+  | element extension { extensionDefinition }
+stringPlusLanguage = anonymous3, empty
+recordInfoNote =
+  notAllowed
+  | element recordInfoNote { noteDefinition }
+copyrightDate =
+  notAllowed
+  | element copyrightDate { dateDefinition }
+anonymous1 =
+  attribute supplied { "yes" }?,
+  anonymous3
+simpleLink =
+  attribute ns1:actuate {
+    xsd:string "other"
+    | xsd:string "onRequest"
+    | xsd:string "onLoad"
+    | xsd:string "none"
+  }?,
+  attribute ns1:show {
+    xsd:string "new"
+    | xsd:string "other"
+    | xsd:string "replace"
+    | xsd:string "embed"
+    | xsd:string "none"
+  }?,
+  attribute ns1:title { xsd:string }?,
+  attribute ns1:arcrole { xsd:string }?,
+  attribute ns1:role { xsd:string }?,
+  attribute ns1:href { xsd:anyURI }?,
+  attribute ns1:type { xsd:string "simple" }?
+internetMediaType =
+  notAllowed
+  | element internetMediaType { stringPlusLanguage }
+namePart =
+  notAllowed
+  | element namePart {
+      attribute type {
+        xsd:string "date"
+        | xsd:string "given"
+        | xsd:string "termsOfAddress"
+        | xsd:string "family"
+      }?,
+      anonymous3
+    }
+shelfLocator =
+  notAllowed
+  | element shelfLocator { stringPlusLanguage }
+extensionDefinition = anonymous0, empty
+cartographicExtension =
+  notAllowed
+  | element cartographicExtension { extensionDefinition }
+extraTerrestrialArea =
+  notAllowed
+  | element extraTerrestrialArea { hierarchicalPart }
+recordInfo =
+  notAllowed
+  | element recordInfo {
+      attribute altRepGroup { xsd:string }?,
+      attribute displayLabel { xsd:string }?,
+      languageAttributeGroup,
+      (recordContentSource
+       | recordCreationDate
+       | recordChangeDate
+       | recordIdentifier
+       | languageOfCataloging
+       | recordOrigin
+       | descriptionStandard
+       | recordInfoNote)+
+    }
+recordContentSource =
+  notAllowed
+  | element recordContentSource { stringPlusLanguagePlusAuthority }
+topic =
+  notAllowed
+  | element topic { stringPlusLanguagePlusAuthority }
+digitalOrigin =
+  notAllowed
+  | element digitalOrigin {
+      xsd:string "born digital"
+      | xsd:string "digitized other analog"
+      | xsd:string "reformatted digital"
+      | xsd:string "digitized microfilm"
+    }
+scale =
+  notAllowed
+  | element scale { stringPlusLanguage }
+mods =
+  notAllowed
+  | element mods {
+      attribute version {
+        xsd:string "3.0"
+        | xsd:string "3.1"
+        | xsd:string "3.2"
+        | xsd:string "3.3"
+        | xsd:string "3.4"
+        | xsd:string "3.5"
+        | xsd:string "3.6"
+        | xsd:string "3.7"
+      }?,
+      attribute ID { xsd:ID }?,
+      modsGroup+
+    }
+altFormatAttributeGroup =
+  attribute contentType { xsd:string }?,
+  attribute altFormat { xsd:anyURI }?
+itemIdentifier =
+  notAllowed
+  | element itemIdentifier {
+      attribute type { xsd:string }?,
+      anonymous3
+    }
+coordinates =
+  notAllowed
+  | element coordinates { stringPlusLanguage }
+holdingSimple =
+  notAllowed
+  | element holdingSimple { copyInformation+ }
+typeOfResource =
+  notAllowed
+  | element typeOfResource {
+      attribute collection { "yes" }?,
+      attribute manuscript { "yes" }?,
+      attribute displayLabel { xsd:string }?,
+      attribute altRepGroup { xsd:string }?,
+      attribute usage { "primary" }?,
+      anonymous5
+    }
+role =
+  notAllowed
+  | element role { roleTerm+ }
+enumerationAndChronology =
+  notAllowed
+  | element enumerationAndChronology {
+      attribute unitType {
+        xsd:string "1" | xsd:string "2" | xsd:string "3"
+      }?,
+      anonymous3
+    }
+place =
+  notAllowed
+  | element place {
+      attribute supplied { "yes" }?,
+      placeTerm+
+    }
+languageTerm =
+  notAllowed
+  | element languageTerm {
+      attribute authorityURI { xsd:anyURI }?,
+      attribute valueURI { xsd:anyURI }?,
+      attribute authority {
+        xsd:string "rfc5646"
+        | xsd:string "rfc3066"
+        | xsd:string "rfc4646"
+        | xsd:string "iso639-2b"
+        | xsd:string "iso639-3"
+      }?,
+      attribute type { xsd:string "code" | xsd:string "text" }?,
+      anonymous3
+    }
+dateIssued =
+  notAllowed
+  | element dateIssued { dateDefinition }
+scriptTerm =
+  notAllowed
+  | element scriptTerm {
+      attribute type { xsd:string "code" | xsd:string "text" }?,
+      anonymous5
+    }
+hierarchicalGeographic =
+  notAllowed
+  | element hierarchicalGeographic {
+      authorityAttributeGroup,
+      (extraTerrestrialArea
+       | continent
+       | country
+       | province
+       | region
+       | state
+       | territory
+       | county
+       | city
+       | citySection
+       | island
+       | area)+
+    }
+noteDefinition =
+  (attribute displayLabel { xsd:string }?,
+   attribute type { xsd:string }?,
+   attribute typeURI { xsd:anyURI }?,
+   simpleLink,
+   attribute ID { xsd:ID }?,
+   attribute altRepGroup { xsd:string }?,
+   anonymous3),
+  empty
+identifier =
+  notAllowed
+  | element identifier { identifierDefinition }
+citySection =
+  notAllowed
+  | element citySection {
+      attribute citySectionType { text }?,
+      anonymous2
+    }
+languageAttributeGroup =
+  attribute transliteration { xsd:string }?,
+  attribute script { xsd:string }?,
+  attribute xml:lang { xsd:language | xsd:string "" }?,
+  attribute lang { xsd:string }?
+genre =
+  notAllowed
+  | element genre {
+      attribute type { xsd:string }?,
+      attribute displayLabel { xsd:string }?,
+      attribute altRepGroup { xsd:string }?,
+      attribute usage { "primary" }?,
+      anonymous5
+    }
+form =
+  notAllowed
+  | element form {
+      attribute type { xsd:string }?,
+      anonymous5
+    }
+number =
+  notAllowed
+  | element number { stringPlusLanguage }
+displayForm =
+  notAllowed
+  | element displayForm { stringPlusLanguage }
+anonymous2 =
+  attribute level { text }?,
+  attribute period { text }?,
+  authorityAttributeGroup,
+  anonymous3
+originInfo =
+  notAllowed
+  | element originInfo {
+      attribute eventType { xsd:string }?,
+      attribute altRepGroup { xsd:string }?,
+      attribute displayLabel { xsd:string }?,
+      languageAttributeGroup,
+      (place
+       | publisher
+       | dateIssued
+       | dateCreated
+       | dateCaptured
+       | dateValid
+       | dateModified
+       | copyrightDate
+       | dateOther
+       | edition
+       | issuance
+       | frequency)+
+    }
+physicalLocation =
+  notAllowed
+  | element physicalLocation {
+      simpleLink,
+      attribute displayLabel { xsd:string }?,
+      attribute type { xsd:string }?,
+      anonymous5
+    }
+geographicCode =
+  notAllowed
+  | element geographicCode {
+      attribute authorityURI { xsd:anyURI }?,
+      attribute valueURI { xsd:anyURI }?,
+      attribute authority {
+        xsd:string "marcgac"
+        | xsd:string "marccountry"
+        | xsd:string "iso3166"
+      }?,
+      anonymous3
+    }
+cartographics =
+  notAllowed
+  | element cartographics {
+      authorityAttributeGroup,
+      scale?,
+      projection?,
+      coordinates*,
+      cartographicExtension*
+    }
+recordIdentifier =
+  notAllowed
+  | element recordIdentifier {
+      attribute source { xsd:string }?,
+      anonymous3
+    }
+county =
+  notAllowed
+  | element county { hierarchicalPart }
+partNumber =
+  notAllowed
+  | element partNumber { stringPlusLanguage }
+city =
+  notAllowed
+  | element city { hierarchicalPart }
+titleInfo =
+  notAllowed
+  | element titleInfo {
+      attribute displayLabel { xsd:string }?,
+      languageAttributeGroup,
+      simpleLink,
+      authorityAttributeGroup,
+      attribute ID { xsd:ID }?,
+      attribute usage { "primary" }?,
+      attribute nameTitleGroup { xsd:string }?,
+      altFormatAttributeGroup,
+      attribute altRepGroup { xsd:string }?,
+      attribute supplied { "yes" }?,
+      attribute otherType { text }?,
+      attribute type {
+        xsd:string "uniform"
+        | xsd:string "alternative"
+        | xsd:string "translated"
+        | xsd:string "abbreviated"
+      }?,
+      (title | subTitle | partNumber | partName | nonSort)*
+    }
+continent =
+  notAllowed
+  | element continent { hierarchicalPart }
+roleTerm =
+  notAllowed
+  | element roleTerm {
+      attribute type { xsd:string "code" | xsd:string "text" }?,
+      anonymous5
+    }
+relatedItem =
+  notAllowed
+  | element relatedItem {
+      simpleLink,
+      attribute ID { xsd:ID }?,
+      attribute displayLabel { xsd:string }?,
+      attribute otherTypeURI { xsd:string }?,
+      attribute otherTypeAuthURI { xsd:string }?,
+      attribute otherTypeAuth { xsd:string }?,
+      attribute otherType { xsd:string }?,
+      attribute type {
+        xsd:string "isReferencedBy"
+        | xsd:string "reviewOf"
+        | xsd:string "original"
+        | xsd:string "references"
+        | xsd:string "constituent"
+        | xsd:string "series"
+        | xsd:string "host"
+        | xsd:string "otherFormat"
+        | xsd:string "preceding"
+        | xsd:string "succeeding"
+        | xsd:string "otherVersion"
+      }?,
+      modsGroup*
+    }
+hierarchicalPart = anonymous2, empty
+accessCondition =
+  notAllowed
+  | element accessCondition {
+      mixed {
+        mixed {
+          anonymous0,
+          simpleLink,
+          languageAttributeGroup,
+          attribute type { xsd:string }?,
+          attribute altRepGroup { xsd:string }?,
+          altFormatAttributeGroup
+        }
+      }
+    }
+\list =
+  notAllowed
+  | element list { stringPlusLanguage }
+classification =
+  notAllowed
+  | element classification {
+      attribute edition { xsd:string }?,
+      attribute displayLabel { xsd:string }?,
+      attribute altRepGroup { xsd:string }?,
+      attribute usage { "primary" }?,
+      attribute generator { xsd:string }?,
+      anonymous5
+    }
+anonymous3 = languageAttributeGroup, xsd:string
+total =
+  notAllowed
+  | element total { xsd:positiveInteger }
+occupation =
+  notAllowed
+  | element occupation { stringPlusLanguagePlusAuthority }
+extent =
+  notAllowed
+  | element extent {
+      attribute unit { text }?,
+      anonymous1
+    }
+url =
+  notAllowed
+  | element url {
+      attribute dateLastAccessed { xsd:string }?,
+      attribute displayLabel { xsd:string }?,
+      attribute note { xsd:string }?,
+      attribute access {
+        xsd:string "preview"
+        | xsd:string "raw object"
+        | xsd:string "object in context"
+      }?,
+      attribute usage {
+        xsd:string "primary display" | xsd:string "primary"
+      }?,
+      xsd:anyURI
+    }
+part =
+  notAllowed
+  | element part {
+      attribute altRepGroup { xsd:string }?,
+      attribute displayLabel { xsd:string }?,
+      languageAttributeGroup,
+      attribute order { xsd:integer }?,
+      attribute type { xsd:string }?,
+      attribute ID { xsd:ID }?,
+      (detail
+       | element extent {
+           attribute unit { xsd:string }?,
+           \start?,
+           end?,
+           total?,
+           \list?
+         }
+       | date
+       | \text)*
+    }
+region =
+  notAllowed
+  | element region {
+      attribute regionType { text }?,
+      anonymous2
+    }
+country =
+  notAllowed
+  | element country { hierarchicalPart }
+authorityAttributeGroup =
+  attribute valueURI { xsd:anyURI }?,
+  attribute authorityURI { xsd:anyURI }?,
+  attribute authority { xsd:string }?
+recordChangeDate =
+  notAllowed
+  | element recordChangeDate { dateDefinition }
+abstract =
+  notAllowed
+  | element abstract {
+      attribute displayLabel { xsd:string }?,
+      attribute type { xsd:string }?,
+      simpleLink,
+      attribute shareable { "no" }?,
+      attribute altRepGroup { xsd:string }?,
+      altFormatAttributeGroup,
+      anonymous3
+    }
+subject =
+  notAllowed
+  | element subject {
+      attribute usage { "primary" }?,
+      attribute altRepGroup { xsd:string }?,
+      attribute displayLabel { xsd:string }?,
+      simpleLink,
+      languageAttributeGroup,
+      authorityAttributeGroup,
+      attribute ID { xsd:ID }?,
+      (topic
+       | geographic
+       | temporal
+       | element titleInfo {
+           attribute type {
+             xsd:string "uniform"
+             | xsd:string "alternative"
+             | xsd:string "translated"
+             | xsd:string "abbreviated"
+           }?,
+           attribute displayLabel { xsd:string }?,
+           languageAttributeGroup,
+           simpleLink,
+           authorityAttributeGroup,
+           attribute ID { xsd:ID }?,
+           (title | subTitle | partNumber | partName | nonSort)*
+         }
+       | element name {
+           attribute displayLabel { xsd:string }?,
+           languageAttributeGroup,
+           simpleLink,
+           authorityAttributeGroup,
+           attribute ID { xsd:ID }?,
+           attribute type {
+             xsd:string "conference"
+             | xsd:string "corporate"
+             | xsd:string "personal"
+             | xsd:string "family"
+           }?,
+           (namePart
+            | displayForm
+            | affiliation
+            | role
+            | description
+            | nameIdentifier)*
+         }
+       | geographicCode
+       | hierarchicalGeographic
+       | cartographics
+       | occupation
+       | genre)*
+    }
+temporal =
+  notAllowed
+  | element temporal { authorityAttributeGroup, anonymous4 }
+issuance =
+  notAllowed
+  | element issuance {
+      xsd:string "serial"
+      | xsd:string "multipart monograph"
+      | xsd:string "integrating resource"
+      | xsd:string "continuing"
+      | xsd:string "single unit"
+      | xsd:string "monographic"
+    }
+territory =
+  notAllowed
+  | element territory { hierarchicalPart }
+identifierDefinition =
+  (attribute displayLabel { xsd:string }?,
+   attribute type { xsd:string }?,
+   attribute typeURI { xsd:anyURI }?,
+   attribute invalid { "yes" }?,
+   attribute altRepGroup { xsd:string }?,
+   anonymous3),
+  empty
+island =
+  notAllowed
+  | element island { hierarchicalPart }
+partName =
+  notAllowed
+  | element partName { stringPlusLanguage }
+dateDefinition = anonymous4, empty
+languageDefinition =
+  (attribute usage { "primary" }?,
+   attribute altRepGroup { xsd:string }?,
+   attribute displayLabel { xsd:string }?,
+   languageAttributeGroup,
+   attribute objectPart { xsd:string }?,
+   languageTerm+,
+   scriptTerm*),
+  empty
+modsCollection =
+  notAllowed
+  | element modsCollection { mods+ }
+frequency =
+  notAllowed
+  | element frequency { stringPlusLanguagePlusAuthority }
+targetAudience =
+  notAllowed
+  | element targetAudience {
+      attribute displayLabel { xsd:string }?,
+      attribute altRepGroup { xsd:string }?,
+      anonymous5
+    }
+affiliation =
+  notAllowed
+  | element affiliation { stringPlusLanguage }
+recordCreationDate =
+  notAllowed
+  | element recordCreationDate { dateDefinition }
+state =
+  notAllowed
+  | element state { hierarchicalPart }
+note =
+  notAllowed
+  | element note { noteDefinition }
+dateCaptured =
+  notAllowed
+  | element dateCaptured { dateDefinition }
+stringPlusLanguagePlusAuthority = anonymous5, empty
+anonymous4 =
+  attribute encoding {
+    xsd:string "w3cdtf"
+    | xsd:string "temper"
+    | xsd:string "iso8601"
+    | xsd:string "marc"
+    | xsd:string "edtf"
+  }?,
+  attribute qualifier {
+    xsd:string "questionable"
+    | xsd:string "approximate"
+    | xsd:string "inferred"
+  }?,
+  attribute point { xsd:string "start" | xsd:string "end" }?,
+  attribute keyDate { "yes" }?,
+  attribute calendar { xsd:string }?,
+  anonymous3
+holdingExternal =
+  notAllowed
+  | element holdingExternal { extensionDefinition }
+date =
+  notAllowed
+  | element date { dateDefinition }
+dateCreated =
+  notAllowed
+  | element dateCreated { dateDefinition }
+languageOfCataloging =
+  notAllowed
+  | element languageOfCataloging { languageDefinition }
+description =
+  notAllowed
+  | element description { stringPlusLanguage }
+dateOther =
+  notAllowed
+  | element dateOther {
+      attribute type { xsd:string }?,
+      anonymous4
+    }
+subTitle =
+  notAllowed
+  | element subTitle { stringPlusLanguage }
+placeTerm =
+  notAllowed
+  | element placeTerm {
+      attribute authorityURI { xsd:anyURI }?,
+      attribute valueURI { xsd:anyURI }?,
+      attribute authority {
+        xsd:string "marcgac"
+        | xsd:string "marccountry"
+        | xsd:string "iso3166"
+      }?,
+      attribute type { xsd:string "code" | xsd:string "text" }?,
+      anonymous3
+    }
+etal =
+  notAllowed
+  | element etal { stringPlusLanguage }
+modsGroup =
+  abstract
+  | accessCondition
+  | classification
+  | extension
+  | genre
+  | identifier
+  | language
+  | location
+  | name
+  | note
+  | originInfo
+  | part
+  | physicalDescription
+  | recordInfo
+  | relatedItem
+  | subject
+  | tableOfContents
+  | targetAudience
+  | titleInfo
+  | typeOfResource
+dateValid =
+  notAllowed
+  | element dateValid { dateDefinition }
+any_lax___any_ =
+  element * - (classification
+               | holdingSimple
+               | identifier
+               | recordIdentifier
+               | physicalDescription
+               | detail
+               | itemIdentifier
+               | etal
+               | recordOrigin
+               | typeOfResource
+               | caption
+               | county
+               | recordInfoNote
+               | scriptTerm
+               | occupation
+               | extent
+               | temporal
+               | roleTerm
+               | cartographics
+               | state
+               | text
+               | province
+               | number
+               | url
+               | abstract
+               | reformattingQuality
+               | coordinates
+               | accessCondition
+               | physicalLocation
+               | geographicCode
+               | dateIssued
+               | partNumber
+               | copyInformation
+               | enumerationAndChronology
+               | dateValid
+               | dateOther
+               | modsCollection
+               | city
+               | role
+               | extension
+               | continent
+               | place
+               | genre
+               | originInfo
+               | recordInfo
+               | languageOfCataloging
+               | citySection
+               | descriptionStandard
+               | namePart
+               | list
+               | cartographicExtension
+               | island
+               | shelfLocator
+               | extraTerrestrialArea
+               | area
+               | recordContentSource
+               | nameIdentifier
+               | tableOfContents
+               | region
+               | subLocation
+               | topic
+               | publisher
+               | name
+               | languageTerm
+               | digitalOrigin
+               | frequency
+               | displayForm
+               | relatedItem
+               | language
+               | titleInfo
+               | nonSort
+               | subject
+               | hierarchicalGeographic
+               | mods
+               | country
+               | internetMediaType
+               | date
+               | holdingExternal
+               | dateCaptured
+               | affiliation
+               | subTitle
+               | geographic
+               | recordChangeDate
+               | dateModified
+               | start
+               | territory
+               | copyrightDate
+               | location
+               | issuance
+               | form
+               | targetAudience
+               | partName
+               | title
+               | edition
+               | description
+               | scale
+               | part
+               | placeTerm
+               | note
+               | alternativeName
+               | projection
+               | electronicLocator
+               | end
+               | recordCreationDate
+               | dateCreated
+               | total) {
+    mixed {
+      (attribute * { text }
+       | any_lax___any_)*
+    }
+  }
+  | extent
+  | occupation
+  | scriptTerm
+  | recordInfoNote
+  | county
+  | caption
+  | typeOfResource
+  | number
+  | province
+  | \text
+  | state
+  | cartographics
+  | roleTerm
+  | temporal
+  | identifier
+  | holdingSimple
+  | classification
+  | recordOrigin
+  | etal
+  | itemIdentifier
+  | detail
+  | physicalDescription
+  | recordIdentifier
+  | continent
+  | extension
+  | role
+  | city
+  | modsCollection
+  | dateOther
+  | dateValid
+  | citySection
+  | languageOfCataloging
+  | recordInfo
+  | genre
+  | originInfo
+  | place
+  | dateIssued
+  | geographicCode
+  | physicalLocation
+  | accessCondition
+  | coordinates
+  | reformattingQuality
+  | abstract
+  | url
+  | enumerationAndChronology
+  | copyInformation
+  | partNumber
+  | date
+  | internetMediaType
+  | country
+  | mods
+  | hierarchicalGeographic
+  | subject
+  | nonSort
+  | titleInfo
+  | language
+  | relatedItem
+  | displayForm
+  | frequency
+  | geographic
+  | subTitle
+  | affiliation
+  | dateCaptured
+  | holdingExternal
+  | area
+  | extraTerrestrialArea
+  | shelfLocator
+  | island
+  | \list
+  | cartographicExtension
+  | namePart
+  | descriptionStandard
+  | languageTerm
+  | digitalOrigin
+  | name
+  | publisher
+  | topic
+  | subLocation
+  | region
+  | tableOfContents
+  | nameIdentifier
+  | recordContentSource
+  | note
+  | placeTerm
+  | part
+  | description
+  | edition
+  | scale
+  | title
+  | partName
+  | total
+  | dateCreated
+  | recordCreationDate
+  | end
+  | electronicLocator
+  | projection
+  | alternativeName
+  | \start
+  | dateModified
+  | recordChangeDate
+  | targetAudience
+  | form
+  | issuance
+  | location
+  | copyrightDate
+  | territory
+detail =
+  notAllowed
+  | element detail {
+      attribute level { xsd:positiveInteger }?,
+      attribute type { xsd:string }?,
+      (number | caption | title)+
+    }
+name =
+  notAllowed
+  | element name {
+      attribute type {
+        xsd:string "conference"
+        | xsd:string "corporate"
+        | xsd:string "personal"
+        | xsd:string "family"
+      }?,
+      attribute usage { "primary" }?,
+      attribute nameTitleGroup { xsd:string }?,
+      attribute altRepGroup { xsd:string }?,
+      attribute displayLabel { xsd:string }?,
+      languageAttributeGroup,
+      simpleLink,
+      authorityAttributeGroup,
+      attribute ID { xsd:ID }?,
+      ((namePart
+        | displayForm
+        | affiliation
+        | role
+        | description
+        | nameIdentifier
+        | alternativeName)+
+       | empty
+       | (etal, (affiliation | role | description)*))
+    }
+nonSort =
+  notAllowed
+  | element nonSort {
+      attribute xml:space {
+        xsd:NCName "default" | xsd:NCName "preserve"
+      }?,
+      anonymous3
+    }
+province =
+  notAllowed
+  | element province { stringPlusLanguage }
+area =
+  notAllowed
+  | element area {
+      attribute areaType { text }?,
+      anonymous2
+    }
+dateModified =
+  notAllowed
+  | element dateModified { dateDefinition }
+caption =
+  notAllowed
+  | element caption { stringPlusLanguage }
+nameIdentifier =
+  notAllowed
+  | element nameIdentifier { identifierDefinition }
+alternativeName =
+  notAllowed
+  | element alternativeName {
+      attribute altType { xsd:string }?,
+      attribute displayLabel { xsd:string }?,
+      languageAttributeGroup,
+      simpleLink,
+      (namePart
+       | displayForm
+       | affiliation
+       | role
+       | description
+       | nameIdentifier)*
+    }
+descriptionStandard =
+  notAllowed
+  | element descriptionStandard { stringPlusLanguagePlusAuthority }
+title =
+  notAllowed
+  | element title { stringPlusLanguage }
+copyInformation =
+  notAllowed
+  | element copyInformation {
+      form?,
+      subLocation*,
+      shelfLocator*,
+      electronicLocator*,
+      element note {
+        attribute displayLabel { xsd:string }?,
+        attribute type { xsd:string }?,
+        simpleLink,
+        attribute ID { xsd:ID }?,
+        anonymous3
+      }*,
+      enumerationAndChronology*,
+      itemIdentifier*
+    }
+language =
+  notAllowed
+  | element language { languageDefinition }
+geographic =
+  notAllowed
+  | element geographic { stringPlusLanguagePlusAuthority }
+\start =
+  notAllowed
+  | element start { stringPlusLanguage }
+location =
+  notAllowed
+  | element location {
+      attribute altRepGroup { xsd:string }?,
+      attribute displayLabel { xsd:string }?,
+      languageAttributeGroup,
+      physicalLocation*,
+      shelfLocator*,
+      url*,
+      holdingSimple?,
+      holdingExternal?
+    }
+anonymous5 = authorityAttributeGroup, anonymous3
+recordOrigin =
+  notAllowed
+  | element recordOrigin { stringPlusLanguage }
+tableOfContents =
+  notAllowed
+  | element tableOfContents {
+      attribute displayLabel { xsd:string }?,
+      attribute type { xsd:string }?,
+      simpleLink,
+      attribute shareable { "no" }?,
+      attribute altRepGroup { xsd:string }?,
+      altFormatAttributeGroup,
+      anonymous3
+    }
+subLocation =
+  notAllowed
+  | element subLocation { stringPlusLanguage }
+electronicLocator =
+  notAllowed
+  | element electronicLocator { stringPlusLanguage }
