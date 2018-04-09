@@ -9,7 +9,7 @@ Other stuff is like marc21 and mods
 
 2. marcToMODS.xsl comes to you from Library of Congress and works with the result from oaimarc2slimmarc.xsl. The version here is hacked to handle namePart data in a smarter way to MODS. Or perhaps I should say that it gives name/namePart the way I want them.
 
-I don't even pretend that this is complete. There are quite a few (more or less proprietary) fields that are not translated because I do not feel they don't seem useful for resource discovery, and there are other fields or constructs that I didn't know existed. Let me if you need something. 
+I don't even pretend that this is complete. There are quite a few (more or less proprietary) fields that are not translated because I do not feel they are useful for resource discovery, and there are other fields or constructs that I didn't know existed. Let me know if you need something. 
 
 Have fun ;^/
 
