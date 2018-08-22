@@ -10,7 +10,11 @@
 
   <xsl:param name="pdfUri"  select="''" />
 
-  <!-- http://biblstandard.dk/kat/konv_danmarc2_to_marc21.htm -->
+  <!-- Dead link: http://biblstandard.dk/kat/konv_danmarc2_to_marc21.htm -->
+
+  <!-- See instead:
+       https://slks.dk/fileadmin/user_upload/0_SLKS/Dokumenter/Biblioteker/BIR/Publikationer/Konvertering_fra_danMARC2_til_MARC21.pdf
+  -->
 
   <xsl:output method="xml"
 	      indent="yes"
