@@ -452,9 +452,9 @@
     <xsl:if test="subfield[@label = 'a'] |
 		  subfield[@label = 'h']">
 
-      <xsl:processing-instruction name="family"><xsl:apply-templates select="subfield[@label = 'a']/string()"/></xsl:processing-instruction>
+      <xsl:processing-instruction name="family"><xsl:value-of select="subfield[@label = 'a']"/></xsl:processing-instruction>
       
-      <xsl:processing-instruction name="given"><xsl:apply-templates select="subfield[@label = 'h']/string()"/></xsl:processing-instruction>
+      <xsl:processing-instruction name="given"><xsl:value-of select="subfield[@label = 'h']"/></xsl:processing-instruction>
 
       <xsl:element name="marc:subfield">
 	<xsl:attribute name="code">a</xsl:attribute>

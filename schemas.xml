@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <locatingRules xmlns="http://thaiopensource.com/ns/locating-rules/1.0">
+  <uri resource="valid_record.mods" uri="mods-3-7.rnc"/>
   <uri resource="aleph11.mods" uri="mods-3-7.rnc"/>
   <uri resource="MODS.xml" uri="mods-3-7.rnc"/>
 </locatingRules>
