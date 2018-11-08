@@ -1,0 +1,100 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<present>
+<record>
+<record_header>
+<set_entry>000000001</set_entry>
+</record_header>
+<doc_number>003431556</doc_number>
+<metadata>
+<oai_marc>
+<fixfield id="FMT">BK</fixfield>
+<fixfield id="LDR">00724name-22002175--450-</fixfield>
+<varfield id="001" i1="0" i2="0">
+<subfield label="a">x929169543</subfield>
+<subfield label="f">a</subfield>
+</varfield>
+<varfield id="004" i1="0" i2="0">
+<subfield label="r">n</subfield>
+<subfield label="a">e</subfield>
+</varfield>
+<varfield id="008" i1="0" i2="0">
+<subfield label="t">m</subfield>
+<subfield label="u">f</subfield>
+<subfield label="a">2012</subfield>
+<subfield label="b">dk</subfield>
+<subfield label="d">y</subfield>
+<subfield label="k">a</subfield>
+<subfield label="l">dan</subfield>
+<subfield label="n">b</subfield>
+<subfield label="x">06</subfield>
+<subfield label="v">5</subfield>
+</varfield>
+<varfield id="009" i1="0" i2="0">
+<subfield label="a">a</subfield>
+<subfield label="g">xe</subfield>
+</varfield>
+<varfield id="021" i1="0" i2="0">
+<subfield label="e">9788792875068</subfield>
+</varfield>
+<varfield id="032" i1="0" i2="0">
+<subfield label="a">DBF201206</subfield>
+</varfield>
+<varfield id="096" i1="0" i2="0">
+<subfield label="a"></subfield>
+</varfield>
+<varfield id="100" i1="0" i2="0">
+<subfield label="a">Vagt</subfield>
+<subfield label="h">Ingeborg</subfield>
+<subfield label="4">aut</subfield>
+</varfield>
+<varfield id="245" i1="0" i2="0">
+<subfield label="a">Der var engang en barndom</subfield>
+<subfield label="c">barndomserindringer</subfield>
+</varfield>
+<varfield id="260" i1="0" i2="0">
+<subfield label="b">&lt;&lt;Mellemgaard=Mellemgård&gt;&gt;</subfield>
+<subfield label="c">2012</subfield>
+</varfield>
+<varfield id="300" i1="0" i2="0">
+<subfield label="a">129 sider</subfield>
+</varfield>
+<varfield id="512" i1="0" i2="0">
+<subfield label="a">Downloades i EPUB-format</subfield>
+</varfield>
+<varfield id="512" i1="0" i2="0">
+<subfield label="a">Beskrivelsen baseret på det fysiske forlæg</subfield>
+</varfield>
+<varfield id="595" i1="0" i2="0">
+<subfield label="a">e-pligt</subfield>
+</varfield>
+<varfield id="652" i1="0" i2="0">
+<subfield label="m">99.4</subfield>
+<subfield label="a">Vagt</subfield>
+<subfield label="h">Ingeborg</subfield>
+</varfield>
+<varfield id="856" i1="0" i2="0">
+<subfield label="z">Adgangsmåde: Internet</subfield>
+<subfield label="u">http://www.mellemgaard.dk/product.asp?product=348</subfield>
+<subfield label="z">Adgang til køb ved udgivelsen</subfield>
+</varfield>
+<fixfield id="BAS">bcx</fixfield>
+<varfield id="CAT" i1=" " i2=" ">
+<subfield label="a">dig1206imp</subfield>
+<subfield label="b"></subfield>
+<subfield label="c">20170502</subfield>
+<subfield label="l">KGL02</subfield>
+<subfield label="h">1136</subfield>
+</varfield>
+<varfield id="UID" i1=" " i2=" ">
+<subfield label="a">x929169543bcx</subfield>
+</varfield>
+<varfield id="720" i1="0" i2="0">
+<subfield label="o">Camilla Faieq Jensen</subfield>
+<subfield label="4">edt</subfield>
+</varfield>
+</oai_marc>
+</metadata>
+</record>
+<session-id>D4UXXCKANL3F2UQSYAGXU1CEP8KFVPATB67GJ6MU4L4LAEK9AY</session-id>
+</present>
+ 
