@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<xsl:transform version="2.0"
+<xsl:transform version="3.0"
 	       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	       xmlns:marc="http://www.loc.gov/MARC21/slim"
 	       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -452,9 +452,9 @@
     <xsl:if test="subfield[@label = 'a'] |
 		  subfield[@label = 'h']">
 
-      <xsl:processing-instruction name="family"><xsl:apply-templates select="subfield[@label = 'a']"/></xsl:processing-instruction>
+      <xsl:processing-instruction name="family"><xsl:apply-templates select="subfield[@label = 'a']/string()"/></xsl:processing-instruction>
       
-      <xsl:processing-instruction name="given"><xsl:apply-templates select="subfield[@label = 'h']"/></xsl:processing-instruction>
+      <xsl:processing-instruction name="given"><xsl:apply-templates select="subfield[@label = 'h']/string()"/></xsl:processing-instruction>
 
       <xsl:element name="marc:subfield">
 	<xsl:attribute name="code">a</xsl:attribute>
